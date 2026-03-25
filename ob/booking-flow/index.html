@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OB-BK — Booking Flow and Order Management</title>
-  <link rel="stylesheet" href="../../../assets/css/wiki.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OB-BK — Booking Flow and Order Management</title>
+<link rel="stylesheet" href="../../assets/css/wiki.css">
+<style>
+.st-ok{background:#dcfce7;color:#15803d;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;border:1px solid #bbf7d0;white-space:nowrap;}
+.st-q {background:#fef9c3;color:#92400e;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;border:1px solid #fde68a;white-space:nowrap;}
+.process-list li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 0;border-bottom:1px solid #f1f5f9;}
+.process-list li:last-child{border-bottom:none;}
+</style>
 </head>
 <body>
-  <nav class="wiki-nav">
-    <a href="../../../index.html" class="logo">✈ Travel Agency Wiki</a>
-    <div class="breadcrumb">
-      <a href="../../../index.html">Home</a>
-      <span>›</span>
-      <a href="../../../ob/index.html">OTA Online Booking and Search</a>
-      <span>›</span>
-      <span>Booking Flow and Order Management</span>
-    </div>
-  </nav>
-  <div class="wiki-container">
-    <div class="page-header">
-      <div class="pid">OB-BK</div>
-      <h1>Booking Flow and Order Management</h1>
-      <div class="meta-row">
-        <span class="meta-pill ota">OB</span>
-        <span class="meta-pill">8 processes</span>
+<div class="wiki-layout">
+  <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1 sb-active"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">2/24</span></a><ul class="sb-l2s"><li><a href="../../ob/search-ranking/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-SR</span><span class="sb-l2-name">Search Ranking and Personalisation</span><span class="sb-l2-cnt">2/8</span></a></li><li><a href="../../ob/booking-flow/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-BK</span><span class="sb-l2-name">Booking Flow and Order Management</span><span class="sb-l2-cnt">0/8</span></a></li><li><a href="../../ob/channel-distribution-ota/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-CH</span><span class="sb-l2-name">Channel and Distribution Management</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">0/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+  <div class="wiki-main">
+    <nav class="wiki-nav">
+      <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+      <div class="breadcrumb">
+        <a href="../../index.html">Home</a><span>›</span>
+        <a href="../index.html">OTA Online Booking and Search</a><span>›</span>
+        <span>Booking Flow and Order Management</span>
+      </div>
+    </nav>
+    <div class="wiki-container">
+      <div class="page-header">
+        <div class="pid">OB-BK</div><h1>Booking Flow and Order Management</h1>
+        <div class="meta-row">
+          <span class="meta-pill ota">OB</span>
+          <span class="meta-pill">8 processes</span>
+          <span class="meta-pill" style="background:#dcfce7;color:#15803d;border-color:#bbf7d0;">0 complete</span>
+        </div>
+      </div>
+      <div class="wiki-section"><h2>Processes</h2>
+        <ul class="process-list">
+          <li><span class="pid-badge">OB-BK-01</span><span style="color:#64748b;font-size:14px;">Booking Initiation and Session Management</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-02</span><span style="color:#64748b;font-size:14px;">Passenger and Guest Details Collection and Validation</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-03</span><span style="color:#64748b;font-size:14px;">Ancillary Upsell Seat Bag Insurance Presentation</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-04</span><span style="color:#64748b;font-size:14px;">Payment Processing and Fraud Screening</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-05</span><span style="color:#64748b;font-size:14px;">Supplier Booking Confirmation and PNR Receipt</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-06</span><span style="color:#64748b;font-size:14px;">Booking Confirmation Email and Itinerary Delivery</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-07</span><span style="color:#64748b;font-size:14px;">Booking Modification and Amendment Handling</span>&nbsp;<span class="st-q">⏳ Queued</span></li><li><span class="pid-badge">OB-BK-08</span><span style="color:#64748b;font-size:14px;">Cancellation Processing and Refund Initiation</span>&nbsp;<span class="st-q">⏳ Queued</span></li>
+        </ul>
       </div>
     </div>
-    <div class="wiki-section">
-      <h2>Processes</h2>
-      <ul class="process-list">
-      <li><span class="pid-badge">OB-BK-01</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-02</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-03</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-04</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-05</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-06</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-07</span><span style="color:#94a3b8;">Coming soon</span></li>
-      <li><span class="pid-badge">OB-BK-08</span><span style="color:#94a3b8;">Coming soon</span></li>
-      </ul>
-    </div>
+    <footer class="wiki-footer"><p>OB-BK — Booking Flow and Order Management · Travel Agency Process Wiki</p></footer>
   </div>
-  <footer class="wiki-footer">
-    <p>OB-BK — Booking Flow and Order Management · Travel Agency Process Wiki</p>
-  </footer>
-  <script src="../../../assets/js/wiki.js"></script>
-</body>
-</html>
+</div>
+<script src="../../assets/js/wiki.js"></script>
+</body></html>
