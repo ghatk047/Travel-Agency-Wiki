@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM-BP-01 — Corporate Travel Policy Design and Configuration</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <nav class="wiki-nav">
+    <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+    <div class="breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span>›</span>
+      <a href="../../tm/index.html">TMC Travel Programme Management</a>
+      <span>›</span>
+      <a href="../../tm/travel-policy-programme/index.html">Business Travel Policy and Programme</a>
+      <span>›</span>
+      <span>TM-BP-01</span>
+    </div>
+  </nav>
+
+  <div class="wiki-container">
+
+    <div class="page-header">
+      <div class="pid">TM-BP-01</div>
+      <h1>Corporate Travel Policy Design and Configuration</h1>
+      <p class="description">A structured process document for designing and configuring a corporate travel policy using TMC (Travel Management Company) and OTA (Online Travel Agency) platforms.</p>
+      <div class="meta-row">
+        <span class="meta-pill tmc">TM — TMC Travel Programme Management</span>
+        <span class="meta-pill">Business Travel Policy and Programme</span>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Process Overview</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr>
+          <td style="width:120px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+          <td style="padding:8px 0;">Initiation of a new corporate travel policy or update to an existing one by the Corporate Travel Manager.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+          <td style="padding:8px 0;">Successful design, configuration, and deployment of a corporate travel policy across all relevant systems ensuring compliance with company policies and traveler needs.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+          <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag concur">SAP Concur Travel</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag salesforce">Salesforce</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="wiki-section">
+      <h2>BPMN Process Diagram</h2>
+      <div class="diagram-wrapper">
+        <img src="../../assets/img/tm-bp-01.png" alt="TM-BP-01 BPMN diagram" loading="lazy">
+        <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>L4 Process Steps</h2>
+      <div style="overflow-x:auto;">
+        <table class="steps-table">
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Name &amp; Pain Point</th>
+              <th>Role</th>
+              <th>System</th>
+              <th>Input</th>
+              <th>Output</th>
+              <th>KPI</th>
+              <th>Flags</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td class="step-id">1.1</td>
+          <td><strong>Policy Requirements Gathering</strong><br>
+              <span style="color:#64748b;font-size:12px">Inconsistent policy interpretation across departments</span></td>
+          <td>Corporate Travel Manager</td>
+          <td><span class="sys-tag">None</span></td>
+          <td style="font-size:12px">Company policies, stakeholder requirements</td>
+          <td style="font-size:12px">Travel policy document</td>
+          <td style="font-size:12px">Number of stakeholders involved in the process</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.2</td>
+          <td><strong>System Compatibility Assessment</strong><br>
+              <span style="color:#64748b;font-size:12px">System limitations affecting policy implementation</span></td>
+          <td>IT Specialist</td>
+          <td><span class="sys-tag openworld">Expedia Open World, SAP Concur Travel</span></td>
+          <td style="font-size:12px">Travel policy document</td>
+          <td style="font-size:12px">Compatibility report</td>
+          <td style="font-size:12px">Time to complete assessment (in hours)</td>
+          <td><span class="dp-yes">◆ Decision</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">2.1</td>
+          <td><strong>Policy Configuration in TMC</strong><br>
+              <span style="color:#64748b;font-size:12px">Complexity in configuring multiple systems</span></td>
+          <td>TMC Administrator</td>
+          <td><span class="sys-tag concur">SAP Concur Travel, Amex GBT Neo/Complete</span></td>
+          <td style="font-size:12px">Travel policy document, compatibility report</td>
+          <td style="font-size:12px">Configured travel policy in TMC systems</td>
+          <td style="font-size:12px">Number of configuration changes required</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">2.2</td>
+          <td><strong>Policy Configuration in OTA</strong><br>
+              <span style="color:#64748b;font-size:12px">OTA system limitations affecting policy implementation</span></td>
+          <td>OTA Administrator</td>
+          <td><span class="sys-tag openworld">Expedia Open World, Amadeus NDC API</span></td>
+          <td style="font-size:12px">Travel policy document, compatibility report</td>
+          <td style="font-size:12px">Configured travel policy in OTA systems</td>
+          <td style="font-size:12px">Number of configuration changes required</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">2.3</td>
+          <td><strong>Policy Testing and Validation</strong><br>
+              <span style="color:#64748b;font-size:12px">Testing gaps leading to undetected issues</span></td>
+          <td>QA Engineer</td>
+          <td><span class="sys-tag openworld">Expedia Open World, SAP Concur Travel</span></td>
+          <td style="font-size:12px">Configured travel policy in TMC/OTA systems</td>
+          <td style="font-size:12px">Test report</td>
+          <td style="font-size:12px">Number of test cases passed</td>
+          <td><span class="dp-yes">◆ Decision</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">3.1</td>
+          <td><strong>Policy Deployment</strong><br>
+              <span style="color:#64748b;font-size:12px">Deployment delays affecting business operations</span></td>
+          <td>Deployment Manager</td>
+          <td><span class="sys-tag openworld">Expedia Open World, SAP Concur Travel</span></td>
+          <td style="font-size:12px">Test report, approved travel policy document</td>
+          <td style="font-size:12px">Deployed travel policy in TMC/OTA systems</td>
+          <td style="font-size:12px">Time to deployment (in days)</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">3.2</td>
+          <td><strong>Policy Training and Communication</strong><br>
+              <span style="color:#64748b;font-size:12px">Low employee engagement with new policies</span></td>
+          <td>Training Coordinator</td>
+          <td><span class="sys-tag cvent">Cvent, Salesforce</span></td>
+          <td style="font-size:12px">Deployed travel policy in TMC/OTA systems</td>
+          <td style="font-size:12px">Training materials, communication plan</td>
+          <td style="font-size:12px">Number of employees trained</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">3.3</td>
+          <td><strong>Policy Monitoring and Feedback</strong><br>
+              <span style="color:#64748b;font-size:12px">Lack of real-time monitoring affecting policy compliance</span></td>
+          <td>Corporate Travel Manager</td>
+          <td><span class="sys-tag concur">SAP Concur Travel, Amex GBT Neo/Complete</span></td>
+          <td style="font-size:12px">Deployed travel policy in TMC/OTA systems</td>
+          <td style="font-size:12px">Monitoring report, feedback loop</td>
+          <td style="font-size:12px">Number of policy violations detected</td>
+          <td><span class="dp-yes">◆ Decision</span></td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Key Performance Indicators</h2>
+      <div class="chip-list"><span class="chip kpi">Number of stakeholders involved in the process</span>
+<span class="chip kpi">Time to complete assessment (in hours)</span>
+<span class="chip kpi">Number of configuration changes required</span>
+<span class="chip kpi">Number of test cases passed</span>
+<span class="chip kpi">Time to deployment (in days)</span>
+<span class="chip kpi">Number of employees trained</span>
+<span class="chip kpi">Number of policy violations detected</span></div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Risks &amp; Exceptions</h2>
+      <div class="chip-list"><span class="chip risk">Inconsistent policy interpretation across departments</span>
+<span class="chip risk">System limitations affecting policy implementation</span>
+<span class="chip risk">Complexity in configuring multiple systems</span>
+<span class="chip risk">OTA system limitations affecting policy implementation</span>
+<span class="chip risk">Testing gaps leading to undetected issues</span>
+<span class="chip risk">Deployment delays affecting business operations</span>
+<span class="chip risk">Low employee engagement with new policies</span>
+<span class="chip risk">Lack of real-time monitoring affecting policy compliance</span></div>
+    </div>
+
+  </div>
+
+  <footer class="wiki-footer">
+    <p>TM-BP-01 — Corporate Travel Policy Design and Configuration · Travel Agency Process Wiki</p>
+    <p style="margin-top:4px;">OTA reference: Expedia Group · TMC reference: Amex GBT + SAP Concur Complete</p>
+  </footer>
+
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
