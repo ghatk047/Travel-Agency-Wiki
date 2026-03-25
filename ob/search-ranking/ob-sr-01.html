@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OB-SR-01 — Flight Search Query Processing and Aggregation</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <nav class="wiki-nav">
+    <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+    <div class="breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span>›</span>
+      <a href="../../ob/index.html">OTA Online Booking and Search</a>
+      <span>›</span>
+      <a href="../../ob/search-ranking/index.html">Search Ranking and Personalisation</a>
+      <span>›</span>
+      <span>OB-SR-01</span>
+    </div>
+  </nav>
+
+  <div class="wiki-container">
+
+    <div class="page-header">
+      <div class="pid">OB-SR-01</div>
+      <h1>Flight Search Query Processing and Aggregation</h1>
+      <p class="description">This process document outlines the structured approach for processing and aggregating flight search queries within an OTA platform, focusing on search ranking and personalization.</p>
+      <div class="meta-row">
+        <span class="meta-pill ota">OB — OTA Online Booking and Search</span>
+        <span class="meta-pill">Search Ranking and Personalisation</span>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Process Overview</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr>
+          <td style="width:120px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+          <td style="padding:8px 0;">User initiates a flight search query through the Expedia Open World platform</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+          <td style="padding:8px 0;">Successful completion produces a personalized list of flights with optimized rankings based on user preferences and availability data.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+          <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag amadeus">Amadeus NDC API</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag aws">AWS SageMaker</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="wiki-section">
+      <h2>BPMN Process Diagram</h2>
+      <div class="diagram-wrapper">
+        <img src="../../assets/img/ob-sr-01.png" alt="OB-SR-01 BPMN diagram" loading="lazy">
+        <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>L4 Process Steps</h2>
+      <div style="overflow-x:auto;">
+        <table class="steps-table">
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Name &amp; Pain Point</th>
+              <th>Role</th>
+              <th>System</th>
+              <th>Input</th>
+              <th>Output</th>
+              <th>KPI</th>
+              <th>Flags</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td class="step-id">1.1</td>
+          <td><strong>Receive Search Query</strong><br>
+              <span style="color:#64748b;font-size:12px">Handling high volume of concurrent searches</span></td>
+          <td>Platform Engineer</td>
+          <td><span class="sys-tag openworld">Expedia Open World</span></td>
+          <td style="font-size:12px">User search parameters (destination, dates, passengers)</td>
+          <td style="font-size:12px">Parsed search query data</td>
+          <td style="font-size:12px">Search response under 800ms</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.2</td>
+          <td><strong>Query GDS and NDC APIs</strong><br>
+              <span style="color:#64748b;font-size:12px">GDS outage impacting availability</span></td>
+          <td>Integration Engineer</td>
+          <td><span class="sys-tag amadeus">Amadeus NDC API, Sabre GDS, Travelport</span></td>
+          <td style="font-size:12px">Parsed search query data</td>
+          <td style="font-size:12px">Flight availability and pricing data</td>
+          <td style="font-size:12px">Data retrieval accuracy over 95%</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.3</td>
+          <td><strong>Aggregate Data from Multiple Sources</strong><br>
+              <span style="color:#64748b;font-size:12px">Handling inconsistent data formats</span></td>
+          <td>Data Engineer</td>
+          <td><span class="sys-tag snowflake">Snowflake, Apache Kafka</span></td>
+          <td style="font-size:12px">Flight availability and pricing data</td>
+          <td style="font-size:12px">Aggregated flight data</td>
+          <td style="font-size:12px">Data aggregation time under 200ms</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.4</td>
+          <td><strong>Apply Personalization Algorithms</strong><br>
+              <span style="color:#64748b;font-size:12px">Balancing personalization with search relevance</span></td>
+          <td>Machine Learning Engineer</td>
+          <td><span class="sys-tag aws">AWS SageMaker</span></td>
+          <td style="font-size:12px">Aggregated flight data, user profile</td>
+          <td style="font-size:12px">Personalized flight recommendations</td>
+          <td style="font-size:12px">Personalization accuracy over 80%</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.5</td>
+          <td><strong>Rank Flights Based on Personalization</strong><br>
+              <span style="color:#64748b;font-size:12px">Dynamic ranking based on real-time data</span></td>
+          <td>Data Scientist</td>
+          <td><span class="sys-tag snowflake">Tableau, Snowflake</span></td>
+          <td style="font-size:12px">Personalized flight recommendations</td>
+          <td style="font-size:12px">Ranked list of flights</td>
+          <td style="font-size:12px">Search ranking accuracy over 75%</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+        <tr>
+          <td class="step-id">1.6</td>
+          <td><strong>Display Results to User</strong><br>
+              <span style="color:#64748b;font-size:12px">Ensuring a seamless user experience</span></td>
+          <td>Frontend Developer</td>
+          <td><span class="sys-tag openworld">Expedia Open World</span></td>
+          <td style="font-size:12px">Ranked list of flights</td>
+          <td style="font-size:12px">User interface displaying flight search results</td>
+          <td style="font-size:12px">User satisfaction score over 4.5/5</td>
+          <td><span class="exc-yes">⚠ Exception</span></td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Key Performance Indicators</h2>
+      <div class="chip-list"><span class="chip kpi">Search response under 800ms</span>
+<span class="chip kpi">Data retrieval accuracy over 95%</span>
+<span class="chip kpi">Data aggregation time under 200ms</span>
+<span class="chip kpi">Personalization accuracy over 80%</span>
+<span class="chip kpi">Search ranking accuracy over 75%</span>
+<span class="chip kpi">User satisfaction score over 4.5/5</span></div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Risks &amp; Exceptions</h2>
+      <div class="chip-list"><span class="chip risk">GDS outage impacting availability</span>
+<span class="chip risk">NDC content gaps</span>
+<span class="chip risk">Handling high volume of concurrent searches</span>
+<span class="chip risk">Handling inconsistent data formats</span>
+<span class="chip risk">Balancing personalization with search relevance</span>
+<span class="chip risk">Dynamic ranking based on real-time data</span>
+<span class="chip risk">Ensuring a seamless user experience</span></div>
+    </div>
+
+  </div>
+
+  <footer class="wiki-footer">
+    <p>OB-SR-01 — Flight Search Query Processing and Aggregation · Travel Agency Process Wiki</p>
+    <p style="margin-top:4px;">OTA reference: Expedia Group · TMC reference: Amex GBT + SAP Concur Complete</p>
+  </footer>
+
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
