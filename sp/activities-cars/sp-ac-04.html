@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SP-AC-04 — Airport Transfer and Ground Transport Integration</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">20/24</span></a><ul class="sb-l2s"><li><a href="../../sp/hotel-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-HT</span><span class="sb-l2-name">Hotel and Accommodation Supply</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../sp/airline-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AI</span><span class="sb-l2-name">Airline and Transport Supply</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../sp/activities-cars/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AC</span><span class="sb-l2-name">Activities Cars and Ancillaries</span><span class="sb-l2-cnt">4/8</span></a></li></ul></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../sp/index.html">OTA Supplier and Inventory Management</a><span>›</span>
+          <a href="../../sp/activities-cars/index.html">Activities Cars and Ancillaries</a><span>›</span>
+          <span>SP-AC-04</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">SP-AC-04</div>
+          <h1>Airport Transfer and Ground Transport Integration</h1>
+          <p class="description">This process document outlines the integration of airport transfer and ground transport services between OTA systems and TMC systems for Expedia Group and Amex GBT / SAP Concur.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">SP — OTA Supplier and Inventory Management</span>
+            <span class="meta-pill">Activities Cars and Ancillaries</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">A booking request is made through an OTA system that includes a requirement for airport transfer or ground transport services.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successful integration ensures seamless booking, real-time availability updates, and accurate pricing for airport transfer and ground transport services across all systems.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag amadeus">Amadeus GDS</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag intsos">International SOS</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag">VCN</span> <span class="sys-tag concur">SAP Analytics Cloud</span> <span class="sys-tag sap">Workday</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/sp-ac-04.png" alt="SP-AC-04 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Initiate Integration Request</strong><br><span style="color:#64748b;font-size:12px">Handling unexpected booking requests</span></td><td>Integration Specialist</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds, AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Booking request with airport transfer or ground transport services</td><td style="font-size:12px">Integration request logged in system</td><td style="font-size:12px">Time to log integration request < 1 hour</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Validate Supplier Data</strong><br><span style="color:#64748b;font-size:12px">Inconsistent supplier data formats</span></td><td>Data Validator</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds, AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Supplier data for airport transfer and ground transport services</td><td style="font-size:12px">Validated supplier data</td><td style="font-size:12px">Data validation accuracy > 95%</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Update Inventory in OTA Systems</strong><br><span style="color:#64748b;font-size:12px">Real-time inventory updates</span></td><td>Inventory Manager</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds, AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Validated supplier data</td><td style="font-size:12px">Updated inventory in OTA systems</td><td style="font-size:12px">Inventory update accuracy > 98%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Push Data to TMC Systems</strong><br><span style="color:#64748b;font-size:12px">Data synchronization issues</span></td><td>Data Pusher</td><td><span class="sys-tag amadeus">SAP Concur T2, SAP Concur Expense, Amex GBT Neo/Complete, Amadeus GDS, SAP S/4HANA, International SOS, Cvent, Amex Corporate Card, VCN, SAP Analytics Cloud, Workday</span></td><td style="font-size:12px">Updated inventory data</td><td style="font-size:12px">Data pushed to TMC systems</td><td style="font-size:12px">Data push success rate > 99%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Monitor Integration Performance</strong><br><span style="color:#64748b;font-size:12px">High integration latency</span></td><td>Integration Monitor</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Integration logs and performance metrics</td><td style="font-size:12px">Performance report</td><td style="font-size:12px">Integration latency < 5 seconds</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Resolve Integration Issues</strong><br><span style="color:#64748b;font-size:12px">Complex integration issues</span></td><td>Support Engineer</td><td><span class="sys-tag">All systems involved in the integration</span></td><td style="font-size:12px">Performance report and issue logs</td><td style="font-size:12px">Resolved issues</td><td style="font-size:12px">Issue resolution time < 2 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Update Documentation</strong><br><span style="color:#64748b;font-size:12px">Outdated documentation</span></td><td>Documentation Specialist</td><td><span class="sys-tag">Confluence, SharePoint</span></td><td style="font-size:12px">Integration changes and improvements</td><td style="font-size:12px">Updated documentation</td><td style="font-size:12px">Documentation accuracy > 95%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Conduct Post-Integration Review</strong><br><span style="color:#64748b;font-size:12px">Low user satisfaction</span></td><td>Project Manager</td><td><span class="sys-tag">All systems involved in the integration</span></td><td style="font-size:12px">Integration performance and user feedback</td><td style="font-size:12px">Post-integration review report</td><td style="font-size:12px">User satisfaction > 85%</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Implement Improvements</strong><br><span style="color:#64748b;font-size:12px">Resource constraints for improvement</span></td><td>Improvement Team</td><td><span class="sys-tag">All systems involved in the integration</span></td><td style="font-size:12px">Post-integration review report</td><td style="font-size:12px">Implemented improvements</td><td style="font-size:12px">Improvement implementation rate > 80%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Monitor and Optimize Integration</strong><br><span style="color:#64748b;font-size:12px">Dynamic changes in system requirements</span></td><td>Continuous Improvement Team</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Integration performance metrics</td><td style="font-size:12px">Optimized integration processes</td><td style="font-size:12px">Optimization success rate > 75%</td><td><span class="dp-yes">◆ Decision</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Time to log integration request < 1 hour</span>
+<span class="chip kpi">Data validation accuracy > 95%</span>
+<span class="chip kpi">Inventory update accuracy > 98%</span>
+<span class="chip kpi">Data push success rate > 99%</span>
+<span class="chip kpi">Integration latency < 5 seconds</span>
+<span class="chip kpi">Issue resolution time < 2 hours</span>
+<span class="chip kpi">Documentation accuracy > 95%</span>
+<span class="chip kpi">User satisfaction > 85%</span>
+<span class="chip kpi">Improvement implementation rate > 80%</span>
+<span class="chip kpi">Optimization success rate > 75%</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Unexpected booking requests</span>
+<span class="chip risk">Inconsistent supplier data formats</span>
+<span class="chip risk">Real-time inventory updates</span>
+<span class="chip risk">Data synchronization issues</span>
+<span class="chip risk">High integration latency</span>
+<span class="chip risk">Complex integration issues</span>
+<span class="chip risk">Outdated documentation</span>
+<span class="chip risk">Low user satisfaction</span>
+<span class="chip risk">Resource constraints for improvement</span>
+<span class="chip risk">Dynamic changes in system requirements</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>SP-AC-04 — Airport Transfer and Ground Transport Integration · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
