@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SP-AI-08 — Airline Commission and Override Management</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">16/24</span></a><ul class="sb-l2s"><li><a href="../../sp/hotel-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-HT</span><span class="sb-l2-name">Hotel and Accommodation Supply</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../sp/airline-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AI</span><span class="sb-l2-name">Airline and Transport Supply</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../sp/activities-cars/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AC</span><span class="sb-l2-name">Activities Cars and Ancillaries</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../sp/index.html">OTA Supplier and Inventory Management</a><span>›</span>
+          <a href="../../sp/airline-supply/index.html">Airline and Transport Supply</a><span>›</span>
+          <span>SP-AI-08</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">SP-AI-08</div>
+          <h1>Airline Commission and Override Management</h1>
+          <p class="description">This process document outlines the management of airline commissions and overrides within the OTA (Expedia Group) and TMC (Amex GBT / SAP Concur) systems.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">SP — OTA Supplier and Inventory Management</span>
+            <span class="meta-pill">Airline and Transport Supply</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Initiation of a new contract or change in existing contract terms involving airline commissions and overrides.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successful implementation and management of airline commission and override policies, ensuring accurate financial reporting and compliance with contractual agreements.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/sp-ai-08.png" alt="SP-AI-08 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Initiate Contract Review</strong><br><span style="color:#64748b;font-size:12px">Complexity in interpreting contract terms</span></td><td>OTA/TMC Contract Manager</td><td><span class="sys-tag partner-central">Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds</span></td><td style="font-size:12px">Contract details and terms</td><td style="font-size:12px">Approved contract with commission and override policies</td><td style="font-size:12px">Time to contract approval within 5 business days</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Configure Commission and Override Policies</strong><br><span style="color:#64748b;font-size:12px">System integration issues</span></td><td>OTA/TMC System Administrator</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Approved contract details</td><td style="font-size:12px">Configured policies in OTA and TMC systems</td><td style="font-size:12px">100% accuracy in policy configuration</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Validate Policy Implementation</strong><br><span style="color:#64748b;font-size:12px">Data validation challenges</span></td><td>OTA/TMC QA Analyst</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Configured policies</td><td style="font-size:12px">Validation report</td><td style="font-size:12px">0% policy implementation errors</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Deploy Policies to Production</strong><br><span style="color:#64748b;font-size:12px">Production deployment risks</span></td><td>OTA/TMC System Administrator</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Validated policies</td><td style="font-size:12px">Policies deployed in production environment</td><td style="font-size:12px">Deployment completed within 2 business days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Monitor Policy Performance</strong><br><span style="color:#64748b;font-size:12px">Real-time monitoring challenges</span></td><td>OTA/TMC Financial Analyst</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Deployed policies</td><td style="font-size:12px">Performance metrics and reports</td><td style="font-size:12px">95% policy adherence rate</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Adjust Policies as Needed</strong><br><span style="color:#64748b;font-size:12px">Dynamic policy adjustment complexity</span></td><td>OTA/TMC Contract Manager</td><td><span class="sys-tag partner-central">Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds</span></td><td style="font-size:12px">Performance metrics and reports</td><td style="font-size:12px">Adjusted policies</td><td style="font-size:12px">100% policy adjustments based on performance data</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Update Documentation</strong><br><span style="color:#64748b;font-size:12px">Documentation management</span></td><td>OTA/TMC Compliance Officer</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Adjusted policies</td><td style="font-size:12px">Updated documentation and training materials</td><td style="font-size:12px">100% updated documentation within 3 business days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Conduct Training Sessions</strong><br><span style="color:#64748b;font-size:12px">Employee engagement</span></td><td>OTA/TMC Trainer</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Updated documentation and training materials</td><td style="font-size:12px">Training completion records</td><td style="font-size:12px">100% employee participation in training sessions</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Review and Audit Policies</strong><br><span style="color:#64748b;font-size:12px">Comprehensive auditing</span></td><td>OTA/TMC Internal Auditor</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka, Salesforce, Tableau</span></td><td style="font-size:12px">Deployed policies and performance metrics</td><td style="font-size:12px">Audit report</td><td style="font-size:12px">0% policy compliance issues identified</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Close the Process</strong><br><span style="color:#64748b;font-size:12px">Final process closure</span></td><td>OTA/TMC Project Manager</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Audit report and training completion records</td><td style="font-size:12px">Process closure documentation</td><td style="font-size:12px">Process closed within 1 business day after audit completion</td><td><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Time to contract approval within 5 business days</span>
+<span class="chip kpi">100% accuracy in policy configuration</span>
+<span class="chip kpi">0% policy implementation errors</span>
+<span class="chip kpi">Deployment completed within 2 business days</span>
+<span class="chip kpi">95% policy adherence rate</span>
+<span class="chip kpi">100% policy adjustments based on performance data</span>
+<span class="chip kpi">100% updated documentation within 3 business days</span>
+<span class="chip kpi">100% employee participation in training sessions</span>
+<span class="chip kpi">0% policy compliance issues identified</span>
+<span class="chip kpi">Process closed within 1 business day after audit completion</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Complexity in interpreting contract terms</span>
+<span class="chip risk">System integration issues</span>
+<span class="chip risk">Data validation challenges</span>
+<span class="chip risk">Production deployment risks</span>
+<span class="chip risk">Real-time monitoring challenges</span>
+<span class="chip risk">Dynamic policy adjustment complexity</span>
+<span class="chip risk">Documentation management</span>
+<span class="chip risk">Employee engagement</span>
+<span class="chip risk">Comprehensive auditing</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>SP-AI-08 — Airline Commission and Override Management · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
