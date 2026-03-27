@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SP-AI-05 — Airline Ancillary Content Bags Seats Upgrades Ingestion</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">13/24</span></a><ul class="sb-l2s"><li><a href="../../sp/hotel-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-HT</span><span class="sb-l2-name">Hotel and Accommodation Supply</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../sp/airline-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AI</span><span class="sb-l2-name">Airline and Transport Supply</span><span class="sb-l2-cnt">5/8</span></a></li><li><a href="../../sp/activities-cars/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AC</span><span class="sb-l2-name">Activities Cars and Ancillaries</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../sp/index.html">OTA Supplier and Inventory Management</a><span>›</span>
+          <a href="../../sp/airline-supply/index.html">Airline and Transport Supply</a><span>›</span>
+          <span>SP-AI-05</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">SP-AI-05</div>
+          <h1>Airline Ancillary Content Bags Seats Upgrades Ingestion</h1>
+          <p class="description">This process document outlines the ingestion of airline ancillary content, including bags and seat upgrades, from various OTA systems into Expedia Group's inventory management system.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">SP — OTA Supplier and Inventory Management</span>
+            <span class="meta-pill">Airline and Transport Supply</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Receiving updated ancillary content data from airlines via integration partners.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successfully ingested and processed ancillary content data, making it available for booking and display in Expedia Group's platforms.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag salesforce">Salesforce</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/sp-ai-05.png" alt="SP-AI-05 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Data Ingestion Initiation</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of data efficiently</span></td><td>Integration Engineer</td><td><span class="sys-tag kafka">AWS SageMaker, Kafka</span></td><td style="font-size:12px">Ancillary content data from airlines</td><td style="font-size:12px">Ingested data into AWS SageMaker for processing</td><td style="font-size:12px">95% successful ingestion rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Data Transformation</strong><br><span style="color:#64748b;font-size:12px">Data schema inconsistencies</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake</span></td><td style="font-size:12px">Ingested ancillary content data</td><td style="font-size:12px">Transformed and standardized data for integration</td><td style="font-size:12px">90% successful transformation rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Data Validation</strong><br><span style="color:#64748b;font-size:12px">Identifying and resolving data anomalies</span></td><td>Quality Assurance Engineer</td><td><span class="sys-tag snowflake">Snowflake, Tableau</span></td><td style="font-size:12px">Transformed data</td><td style="font-size:12px">Validated data with no errors</td><td style="font-size:12px">98% successful validation rate</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Data Loading</strong><br><span style="color:#64748b;font-size:12px">Handling database capacity and performance</span></td><td>Database Administrator</td><td><span class="sys-tag openworld">Snowflake, Expedia Open World, Partner Central</span></td><td style="font-size:12px">Validated ancillary content data</td><td style="font-size:12px">Loaded data into Expedia Group's inventory systems</td><td style="font-size:12px">95% successful load rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Data Synchronization</strong><br><span style="color:#64748b;font-size:12px">Ensuring real-time data consistency</span></td><td>Integration Engineer</td><td><span class="sys-tag one-key">Snowflake, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds</span></td><td style="font-size:12px">Loaded ancillary content data</td><td style="font-size:12px">Synchronized data across all OTA systems</td><td style="font-size:12px">90% successful synchronization rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Data Availability Check</strong><br><span style="color:#64748b;font-size:12px">Ensuring seamless user experience</span></td><td>Product Manager</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central</span></td><td style="font-size:12px">Synchronized ancillary content data</td><td style="font-size:12px">Verified data availability for booking and display</td><td style="font-size:12px">98% successful availability rate</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Data Monitoring</strong><br><span style="color:#64748b;font-size:12px">Real-time monitoring and alerting</span></td><td>Operations Engineer</td><td><span class="sys-tag snowflake">Snowflake, AWS SageMaker, Kafka</span></td><td style="font-size:12px">Ingested and processed ancillary content data</td><td style="font-size:12px">Continuous monitoring of data ingestion and processing pipelines</td><td style="font-size:12px">95% successful monitoring rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Data Reporting</strong><br><span style="color:#64748b;font-size:12px">Generating actionable insights</span></td><td>Business Analyst</td><td><span class="sys-tag salesforce">Tableau, Salesforce</span></td><td style="font-size:12px">Monitored ancillary content data</td><td style="font-size:12px">Generated reports on ingestion and processing performance</td><td style="font-size:12px">90% successful report generation rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Data Retention</strong><br><span style="color:#64748b;font-size:12px">Managing storage costs and performance</span></td><td>Database Administrator</td><td><span class="sys-tag snowflake">Snowflake</span></td><td style="font-size:12px">Processed ancillary content data</td><td style="font-size:12px">Archived and retained data for compliance and analytics</td><td style="font-size:12px">98% successful retention rate</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Data Security Audit</strong><br><span style="color:#64748b;font-size:12px">Protecting sensitive customer information</span></td><td>Security Engineer</td><td><span class="sys-tag snowflake">Snowflake, AWS SageMaker, Kafka</span></td><td style="font-size:12px">Ingested and processed ancillary content data</td><td style="font-size:12px">Conducted security audits to ensure data integrity and privacy</td><td style="font-size:12px">95% successful audit rate</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">95% successful ingestion rate</span>
+<span class="chip kpi">90% successful transformation rate</span>
+<span class="chip kpi">98% successful validation rate</span>
+<span class="chip kpi">95% successful load rate</span>
+<span class="chip kpi">90% successful synchronization rate</span>
+<span class="chip kpi">98% successful availability rate</span>
+<span class="chip kpi">95% successful monitoring rate</span>
+<span class="chip kpi">90% successful report generation rate</span>
+<span class="chip kpi">98% successful retention rate</span>
+<span class="chip kpi">95% successful audit rate</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Data schema inconsistencies leading to transformation errors</span>
+<span class="chip risk">Handling large volumes of data efficiently during ingestion</span>
+<span class="chip risk">Identifying and resolving data anomalies during validation</span>
+<span class="chip risk">Ensuring database capacity and performance during loading</span>
+<span class="chip risk">Ensuring real-time data consistency across multiple systems</span>
+<span class="chip risk">Managing storage costs and performance during retention</span>
+<span class="chip risk">Protecting sensitive customer information through security audits</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>SP-AI-05 — Airline Ancillary Content Bags Seats Upgrades Ingestion · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
