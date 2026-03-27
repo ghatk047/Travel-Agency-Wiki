@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SP-HT-02 — Rate and Availability Loading and Synchronisation</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">2/24</span></a><ul class="sb-l2s"><li><a href="../../sp/hotel-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-HT</span><span class="sb-l2-name">Hotel and Accommodation Supply</span><span class="sb-l2-cnt">2/8</span></a></li><li><a href="../../sp/airline-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AI</span><span class="sb-l2-name">Airline and Transport Supply</span><span class="sb-l2-cnt">0/8</span></a></li><li><a href="../../sp/activities-cars/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AC</span><span class="sb-l2-name">Activities Cars and Ancillaries</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../sp/index.html">OTA Supplier and Inventory Management</a><span>›</span>
+          <a href="../../sp/hotel-supply/index.html">Hotel and Accommodation Supply</a><span>›</span>
+          <span>SP-HT-02</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">SP-HT-02</div>
+          <h1>Rate and Availability Loading and Synchronisation</h1>
+          <p class="description">This process document outlines the steps for loading and synchronizing hotel rates and availability across various OTA and TMC systems.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">SP — OTA Supplier and Inventory Management</span>
+            <span class="meta-pill">Hotel and Accommodation Supply</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Daily scheduled job or manual initiation by an administrator</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successful synchronization of hotel rates and availability data across all integrated systems, ensuring consistent pricing and inventory information for travelers.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag amadeus">Amadeus GDS</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag intsos">International SOS</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag">VCN</span> <span class="sys-tag concur">SAP Analytics Cloud</span> <span class="sys-tag sap">Workday</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/sp-ht-02.png" alt="SP-HT-02 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Initiate Rate and Availability Loading</strong><br><span style="color:#64748b;font-size:12px">Handling inconsistent data formats from different suppliers</span></td><td>OTA Supplier Integration Team</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds</span></td><td style="font-size:12px">Hotel rate and availability data from suppliers</td><td style="font-size:12px">Loaded data into respective OTA systems</td><td style="font-size:12px">95% successful load rate within 1 hour</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Transform Data for TMC Systems</strong><br><span style="color:#64748b;font-size:12px">Real-time data transformation and consistency</span></td><td>TMC Integration Team</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka</span></td><td style="font-size:12px">Data from OTA systems</td><td style="font-size:12px">Transformed data ready for TMC integration</td><td style="font-size:12px">100% transformation accuracy within 30 minutes</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Load Data into TMC Systems</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of data and ensuring system performance</span></td><td>TMC Integration Team</td><td><span class="sys-tag amadeus">SAP Concur T2, SAP Concur Expense, Amex GBT Neo/Complete, Amadeus GDS, SAP S/4HANA, International SOS, Cvent, Amex Corporate Card, VCN, SAP Analytics Cloud, Workday</span></td><td style="font-size:12px">Transformed data</td><td style="font-size:12px">Data loaded into TMC systems</td><td style="font-size:12px">98% successful load rate within 1 hour</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Monitor Data Synchronization</strong><br><span style="color:#64748b;font-size:12px">Real-time monitoring and alerting</span></td><td>Data Integration Team</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Loaded data in OTA and TMC systems</td><td style="font-size:12px">Monitoring dashboard for synchronization status</td><td style="font-size:12px">99% data consistency across all systems within 24 hours</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Resolve Synchronization Issues</strong><br><span style="color:#64748b;font-size:12px">Identifying and resolving complex integration issues</span></td><td>Data Integration Team</td><td><span class="sys-tag">All systems involved in the process</span></td><td style="font-size:12px">Monitoring dashboard alerts</td><td style="font-size:12px">Resolved synchronization issues</td><td style="font-size:12px">90% issue resolution within 1 hour</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Update Documentation</strong><br><span style="color:#64748b;font-size:12px">Maintaining accurate and up-to-date documentation</span></td><td>IT Documentation Team</td><td><span class="sys-tag">Confluence, Jira</span></td><td style="font-size:12px">Process logs and issue resolutions</td><td style="font-size:12px">Updated process documentation</td><td style="font-size:12px">100% updated documentation within 24 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">95% successful load rate within 1 hour</span>
+<span class="chip kpi">100% transformation accuracy within 30 minutes</span>
+<span class="chip kpi">98% successful load rate within 1 hour</span>
+<span class="chip kpi">99% data consistency across all systems within 24 hours</span>
+<span class="chip kpi">90% issue resolution within 1 hour</span>
+<span class="chip kpi">100% updated documentation within 24 hours</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Inconsistent data formats from different suppliers</span>
+<span class="chip risk">Real-time data transformation and consistency issues</span>
+<span class="chip risk">Handling large volumes of data and ensuring system performance</span>
+<span class="chip risk">Complex integration issues leading to synchronization failures</span>
+<span class="chip risk">Maintaining accurate and up-to-date documentation</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>SP-HT-02 — Rate and Availability Loading and Synchronisation · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
