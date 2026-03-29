@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>DC-TR-08 — Post-Incident Debrief and Programme Update</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1 sb-active"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">8/16</span></a><ul class="sb-l2s"><li><a href="../../dc/traveller-tracking/index.html" class="sb-l2-a"><span class="sb-l2-code">DC-TR</span><span class="sb-l2-name">Traveller Tracking and Safety</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../dc/compliance-regulatory/index.html" class="sb-l2-a"><span class="sb-l2-code">DC-CR</span><span class="sb-l2-name">Compliance and Regulatory</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../dc/index.html">TMC Duty of Care and Risk Management</a><span>›</span>
+          <a href="../../dc/traveller-tracking/index.html">Traveller Tracking and Safety</a><span>›</span>
+          <span>DC-TR-08</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">DC-TR-08</div>
+          <h1>Post-Incident Debrief and Programme Update</h1>
+          <p class="description">This process document outlines the steps for conducting a post-incident debrief and programme update within the TMC Duty of Care and Risk Management domain, focusing on Traveller Tracking and Safety.</p>
+          <div class="meta-row">
+            <span class="meta-pill tmc">DC — TMC Duty of Care and Risk Management</span>
+            <span class="meta-pill">Traveller Tracking and Safety</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">An incident involving traveller safety or tracking is resolved.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">A comprehensive review of the incident leads to actionable improvements in the traveller tracking and safety programme, enhancing overall risk management practices.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag sap">Workday</span> <span class="sys-tag concur">SAP Analytics Cloud</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/dc-tr-08.png" alt="DC-TR-08 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Incident Identification</strong><br><span style="color:#64748b;font-size:12px">Delayed identification of incidents</span></td><td>Duty of Care Manager</td><td><span class="sys-tag concur">SAP Concur T2, SAP Concur Expense</span></td><td style="font-size:12px">Incident report</td><td style="font-size:12px">Confirmed incident details</td><td style="font-size:12px">Time to identify incident</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Incident Classification</strong><br><span style="color:#64748b;font-size:12px">Inaccurate categorization leading to ineffective response</span></td><td>Risk Analyst</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake</span></td><td style="font-size:12px">Confirmed incident details</td><td style="font-size:12px">Incident classification report</td><td style="font-size:12px">Accuracy of classification</td><td></td></tr><tr><td class="step-id">1.3</td><td><strong>Incident Analysis</strong><br><span style="color:#64748b;font-size:12px">Lack of thorough investigation</span></td><td>Data Analyst</td><td><span class="sys-tag kafka">Kafka, Tableau</span></td><td style="font-size:12px">Incident classification report</td><td style="font-size:12px">Root cause analysis report</td><td style="font-size:12px">Time to complete analysis</td><td></td></tr><tr><td class="step-id">1.4</td><td><strong>Stakeholder Engagement</strong><br><span style="color:#64748b;font-size:12px">Insufficient stakeholder involvement</span></td><td>Project Manager</td><td><span class="sys-tag cvent">Salesforce, Cvent</span></td><td style="font-size:12px">Root cause analysis report</td><td style="font-size:12px">Engagement summary</td><td style="font-size:12px">Number of stakeholders engaged</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Action Plan Development</strong><br><span style="color:#64748b;font-size:12px">Lack of actionable steps</span></td><td>Risk Manager</td><td><span class="sys-tag sap">SAP S/4HANA, Workday</span></td><td style="font-size:12px">Engagement summary</td><td style="font-size:12px">Action plan document</td><td style="font-size:12px">Number of action items identified</td><td></td></tr><tr><td class="step-id">1.6</td><td><strong>Action Plan Implementation</strong><br><span style="color:#64748b;font-size:12px">Slow response to identified issues</span></td><td>Operations Team</td><td><span class="sys-tag concur">SAP Concur T2, SAP Concur Expense</span></td><td style="font-size:12px">Action plan document</td><td style="font-size:12px">Implementation status report</td><td style="font-size:12px">Time to implement action plan</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Monitoring and Evaluation</strong><br><span style="color:#64748b;font-size:12px">Poor outcomes from implemented actions</span></td><td>Quality Assurance Manager</td><td><span class="sys-tag snowflake">Snowflake, Tableau</span></td><td style="font-size:12px">Implementation status report</td><td style="font-size:12px">Evaluation report</td><td style="font-size:12px">Effectiveness of action plan</td><td></td></tr><tr><td class="step-id">1.8</td><td><strong>Continuous Improvement</strong><br><span style="color:#64748b;font-size:12px">Lack of ongoing enhancements</span></td><td>Duty of Care Manager</td><td><span class="sys-tag concur">SAP Analytics Cloud, Workday</span></td><td style="font-size:12px">Evaluation report</td><td style="font-size:12px">Updated programme document</td><td style="font-size:12px">Number of improvements made</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Documentation Update</strong><br><span style="color:#64748b;font-size:12px">Stale information affecting travellers</span></td><td>Content Manager</td><td><span class="sys-tag salesforce">Salesforce, TravelAds</span></td><td style="font-size:12px">Updated programme document</td><td style="font-size:12px">Published updates</td><td style="font-size:12px">Time to update documentation</td><td></td></tr><tr><td class="step-id">1.10</td><td><strong>Feedback Collection</strong><br><span style="color:#64748b;font-size:12px">Insufficient feedback for continuous improvement</span></td><td>Customer Experience Manager</td><td><span class="sys-tag cvent">Cvent, Amex Corporate Card</span></td><td style="font-size:12px">Published updates</td><td style="font-size:12px">Feedback summary</td><td style="font-size:12px">Number of feedback received</td><td><span class="dp-yes">◆ Decision</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Time to identify incident</span>
+<span class="chip kpi">Accuracy of classification</span>
+<span class="chip kpi">Time to complete analysis</span>
+<span class="chip kpi">Number of stakeholders engaged</span>
+<span class="chip kpi">Number of action items identified</span>
+<span class="chip kpi">Time to implement action plan</span>
+<span class="chip kpi">Effectiveness of action plan</span>
+<span class="chip kpi">Number of improvements made</span>
+<span class="chip kpi">Time to update documentation</span>
+<span class="chip kpi">Number of feedback received</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Delayed identification of incidents</span>
+<span class="chip risk">Misclassification of incidents</span>
+<span class="chip risk">Inaccurate categorization leading to ineffective response</span>
+<span class="chip risk">Low engagement</span>
+<span class="chip risk">Inadequate action plan</span>
+<span class="chip risk">Slow response to identified issues</span>
+<span class="chip risk">Poor outcomes from implemented actions</span>
+<span class="chip risk">Lack of ongoing enhancements</span>
+<span class="chip risk">Stale information affecting travellers</span>
+<span class="chip risk">Insufficient feedback for continuous improvement</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>DC-TR-08 — Post-Incident Debrief and Programme Update · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
