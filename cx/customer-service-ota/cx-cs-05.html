@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CX-CS-05 — Chargebacks and Payment Dispute Management</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">5/16</span></a><ul class="sb-l2s"><li><a href="../../cx/customer-service-ota/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-CS</span><span class="sb-l2-name">Customer Service Operations</span><span class="sb-l2-cnt">5/8</span></a></li><li><a href="../../cx/personalisation-ux/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-PX</span><span class="sb-l2-name">Personalisation and User Experience</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../cx/index.html">OTA Customer Experience and Service</a><span>›</span>
+          <a href="../../cx/customer-service-ota/index.html">Customer Service Operations</a><span>›</span>
+          <span>CX-CS-05</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">CX-CS-05</div>
+          <h1>Chargebacks and Payment Dispute Management</h1>
+          <p class="description">This process document outlines the steps for managing chargebacks and payment disputes within the OTA Customer Experience and Service domain, focusing on both Expedia Group's systems and Amex GBT / SAP Concur TMC systems.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">CX — OTA Customer Experience and Service</span>
+            <span class="meta-pill">Customer Service Operations</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">A customer initiates a chargeback or reports a payment dispute through any of the supported channels (e.g., email, phone, online portal).</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">The process ensures that all disputes are handled efficiently and fairly, resulting in either a resolution to the issue or a clear explanation of why no action can be taken.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag concur">SAP Concur Expense</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/cx-cs-05.png" alt="CX-CS-05 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Receive Dispute Notification</strong><br><span style="color:#64748b;font-size:12px">Delays in dispute notification</span></td><td>Customer Service Agent</td><td><span class="sys-tag salesforce">Salesforce</span></td><td style="font-size:12px">Dispute report from customer</td><td style="font-size:12px">Case created in Salesforce</td><td style="font-size:12px">Response time within 2 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Initial Assessment</strong><br><span style="color:#64748b;font-size:12px">Complex disputes requiring deep analysis</span></td><td>Customer Service Agent</td><td><span class="sys-tag salesforce">Salesforce, AWS SageMaker</span></td><td style="font-size:12px">Dispute case details</td><td style="font-size:12px">Assessment of dispute validity</td><td style="font-size:12px">Assessment completed within 4 hours</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Notify Stakeholders</strong><br><span style="color:#64748b;font-size:12px">Miscommunication between teams</span></td><td>Customer Service Agent</td><td><span class="sys-tag salesforce">Salesforce, Email</span></td><td style="font-size:12px">Assessment results</td><td style="font-size:12px">Notifications sent to relevant parties (e.g., finance, legal)</td><td style="font-size:12px">Notifications sent within 1 hour</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Review Documentation</strong><br><span style="color:#64748b;font-size:12px">Lack of comprehensive documentation</span></td><td>Finance Specialist</td><td><span class="sys-tag snowflake">Snowflake, Kafka</span></td><td style="font-size:12px">Dispute case details and documentation</td><td style="font-size:12px">Documentation review completed</td><td style="font-size:12px">Review completed within 24 hours</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Decision Making</strong><br><span style="color:#64748b;font-size:12px">Inconsistent decision-making processes</span></td><td>Finance Specialist, Legal Advisor</td><td><span class="sys-tag sap">Salesforce, SAP S/4HANA</span></td><td style="font-size:12px">Reviewed documentation and assessment</td><td style="font-size:12px">Decision on dispute resolution</td><td style="font-size:12px">Decision made within 2 business days</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Execute Resolution</strong><br><span style="color:#64748b;font-size:12px">Technical issues with payment systems</span></td><td>Finance Specialist, Customer Service Agent</td><td><span class="sys-tag concur">Salesforce, Amex Corporate Card, SAP Concur Expense</span></td><td style="font-size:12px">Decision and resolution plan</td><td style="font-size:12px">Resolution executed (e.g., refund, adjustment)</td><td style="font-size:12px">Resolution completed within 3 business days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Notify Customer</strong><br><span style="color:#64748b;font-size:12px">Poor communication with customers</span></td><td>Customer Service Agent</td><td><span class="sys-tag salesforce">Salesforce, Email</span></td><td style="font-size:12px">Resolution details</td><td style="font-size:12px">Notification sent to customer</td><td style="font-size:12px">Notification sent within 1 hour of resolution</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Close Case</strong><br><span style="color:#64748b;font-size:12px">Incomplete case documentation</span></td><td>Customer Service Agent</td><td><span class="sys-tag salesforce">Salesforce</span></td><td style="font-size:12px">Resolution confirmation from customer</td><td style="font-size:12px">Case closed in Salesforce</td><td style="font-size:12px">Case closure within 24 hours of resolution confirmation</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Review and Improve Process</strong><br><span style="color:#64748b;font-size:12px">Lack of process visibility</span></td><td>Process Analyst</td><td><span class="sys-tag powerbi">Tableau, SAP Analytics Cloud</span></td><td style="font-size:12px">Dispute data and outcomes</td><td style="font-size:12px">Process improvements identified</td><td style="font-size:12px">Improvement suggestions within 1 week</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Implement Improvements</strong><br><span style="color:#64748b;font-size:12px">Resistance to change</span></td><td>IT Specialist, Process Analyst</td><td><span class="sys-tag sap">AWS SageMaker, SAP S/4HANA</span></td><td style="font-size:12px">Process improvement suggestions</td><td style="font-size:12px">Improvements implemented in systems</td><td style="font-size:12px">Implementation completed within 2 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Response time within 2 hours</span>
+<span class="chip kpi">Assessment completed within 4 hours</span>
+<span class="chip kpi">Notifications sent within 1 hour</span>
+<span class="chip kpi">Review completed within 24 hours</span>
+<span class="chip kpi">Decision made within 2 business days</span>
+<span class="chip kpi">Resolution completed within 3 business days</span>
+<span class="chip kpi">Notification sent within 1 hour of resolution</span>
+<span class="chip kpi">Case closure within 24 hours of resolution confirmation</span>
+<span class="chip kpi">Improvement suggestions within 1 week</span>
+<span class="chip kpi">Implementation completed within 2 weeks</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Delays in dispute notification</span>
+<span class="chip risk">Complex disputes requiring deep analysis</span>
+<span class="chip risk">Miscommunication between teams</span>
+<span class="chip risk">Lack of comprehensive documentation</span>
+<span class="chip risk">Inconsistent decision-making processes</span>
+<span class="chip risk">Technical issues with payment systems</span>
+<span class="chip risk">Poor communication with customers</span>
+<span class="chip risk">Incomplete case documentation</span>
+<span class="chip risk">Lack of process visibility</span>
+<span class="chip risk">Resistance to change</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>CX-CS-05 — Chargebacks and Payment Dispute Management · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
