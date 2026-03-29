@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>IT-DA-01 — Data Warehouse Management Snowflake Redshift</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1 sb-active"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">9/16</span></a><ul class="sb-l2s"><li><a href="../../it/platform-engineering/index.html" class="sb-l2-a"><span class="sb-l2-code">IT-PF</span><span class="sb-l2-name">Platform Engineering and APIs</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../it/data-ai-analytics/index.html" class="sb-l2-a"><span class="sb-l2-code">IT-DA</span><span class="sb-l2-name">Data AI and Analytics</span><span class="sb-l2-cnt">1/8</span></a></li></ul></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../it/index.html">Platform Technology and Data</a><span>›</span>
+          <a href="../../it/data-ai-analytics/index.html">Data AI and Analytics</a><span>›</span>
+          <span>IT-DA-01</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">IT-DA-01</div>
+          <h1>Data Warehouse Management Snowflake Redshift</h1>
+          <p class="description">This process document outlines the management of a data warehouse using Snowflake and Redshift for Expedia Group's OTA and TMC systems.</p>
+          <div class="meta-row">
+            <span class="meta-pill it">IT — Platform Technology and Data</span>
+            <span class="meta-pill">Data AI and Analytics</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Initiation of a new data warehouse project or regular maintenance cycle.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">A robust, scalable, and efficient data warehouse system supporting business intelligence and analytics needs.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag">Redshift</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag salesforce">Salesforce</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/it-da-01.png" alt="IT-DA-01 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Define Requirements</strong><br><span style="color:#64748b;font-size:12px">Aligning business needs with technical capabilities</span></td><td>Data Architect</td><td><span class="sys-tag snowflake">Snowflake, Redshift</span></td><td style="font-size:12px">Business requirements, stakeholder inputs</td><td style="font-size:12px">Data warehouse architecture document</td><td style="font-size:12px">Complete requirements documentation within 2 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Design Schema</strong><br><span style="color:#64748b;font-size:12px">Optimizing schema for performance and scalability</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift</span></td><td style="font-size:12px">Architecture document</td><td style="font-size:12px">Schema design document</td><td style="font-size:12px">Schema design completed within 3 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Set Up Environment</strong><br><span style="color:#64748b;font-size:12px">Resource allocation and configuration management</span></td><td>DevOps Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift, AWS</span></td><td style="font-size:12px">Schema design document</td><td style="font-size:12px">Environment setup with necessary configurations</td><td style="font-size:12px">Environment ready within 4 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Data Ingestion</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of data and ensuring data quality</span></td><td>ETL Developer</td><td><span class="sys-tag snowflake">Snowflake, Redshift, Kafka, AWS SageMaker</span></td><td style="font-size:12px">Source data from OTA/TMC systems</td><td style="font-size:12px">Ingested data in the warehouse</td><td style="font-size:12px">95% data ingestion success rate within 6 weeks</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Data Transformation</strong><br><span style="color:#64748b;font-size:12px">Complex transformations and error handling</span></td><td>ETL Developer</td><td><span class="sys-tag snowflake">Snowflake, Redshift, AWS SageMaker</span></td><td style="font-size:12px">Ingested data</td><td style="font-size:12px">Transformed and cleaned data</td><td style="font-size:12px">90% transformation accuracy within 7 weeks</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Data Storage</strong><br><span style="color:#64748b;font-size:12px">Optimizing storage costs and performance</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift</span></td><td style="font-size:12px">Transformed data</td><td style="font-size:12px">Data stored in the warehouse</td><td style="font-size:12px">98% storage efficiency within 8 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Data Analysis</strong><br><span style="color:#64748b;font-size:12px">Interpreting complex data patterns</span></td><td>Data Analyst</td><td><span class="sys-tag snowflake">Snowflake, Redshift, Tableau, Salesforce</span></td><td style="font-size:12px">Stored data</td><td style="font-size:12px">Business insights and reports</td><td style="font-size:12px">85% accurate analysis within 9 weeks</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Performance Tuning</strong><br><span style="color:#64748b;font-size:12px">Identifying bottlenecks and optimizing queries</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift</span></td><td style="font-size:12px">Analysis results and performance metrics</td><td style="font-size:12px">Optimized data warehouse performance</td><td style="font-size:12px">95% improvement in query response time within 10 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Security Configuration</strong><br><span style="color:#64748b;font-size:12px">Balancing access and security requirements</span></td><td>Security Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift, AWS IAM</span></td><td style="font-size:12px">Access control policies</td><td style="font-size:12px">Secure data warehouse environment</td><td style="font-size:12px">Zero security breaches within 12 weeks</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Monitoring and Maintenance</strong><br><span style="color:#64748b;font-size:12px">Proactive issue resolution and capacity planning</span></td><td>DevOps Engineer, Data Engineer</td><td><span class="sys-tag snowflake">Snowflake, Redshift, AWS CloudWatch</span></td><td style="font-size:12px">Continuous monitoring tools</td><td style="font-size:12px">Regular maintenance activities</td><td style="font-size:12px">98% system uptime within 12 weeks</td><td><span class="dp-yes">◆ Decision</span><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Data ingestion success rate</span>
+<span class="chip kpi">Transformation accuracy</span>
+<span class="chip kpi">Storage efficiency</span>
+<span class="chip kpi">Analysis accuracy</span>
+<span class="chip kpi">Query response time</span>
+<span class="chip kpi">System uptime</span>
+<span class="chip kpi">Zero security breaches</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Inaccurate data ingestion and transformation</span>
+<span class="chip risk">High storage costs and performance issues</span>
+<span class="chip risk">Difficult interpretation of complex data patterns</span>
+<span class="chip risk">Security vulnerabilities and compliance issues</span>
+<span class="chip risk">Proactive issue resolution challenges</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>IT-DA-01 — Data Warehouse Management Snowflake Redshift · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
