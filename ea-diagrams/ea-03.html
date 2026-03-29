@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EA-03 — TMC Technology Stack — Amex GBT + Concur Complete</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <style>
+    .ea-nav{display:flex;justify-content:space-between;align-items:center;
+      padding:12px 0;margin-bottom:16px;}
+    .ea-nav-btn{background:#1d4ed8;color:#fff;padding:6px 16px;border-radius:6px;
+      text-decoration:none;font-size:13px;font-weight:600;}
+    .ea-nav-btn:hover{background:#1e40af;}
+    .ea-subtitle{font-size:14px;color:#64748b;margin-bottom:12px;font-style:italic;}
+    .diagram-wrapper img{width:100%;height:auto;cursor:zoom-in;border:1px solid #e2e8f0;border-radius:8px;}
+    .zoom-hint{font-size:12px;color:#94a3b8;margin-top:8px;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains · 5 EA Diagrams</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span></a></div><div class="sb-l1"><a href="../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span></a></div><div class="sb-l1"><a href="../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span></a></div><div class="sb-l1"><a href="../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span></a></div><div class="sb-l1"><a href="../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span></a></div><div class="sb-l1"><a href="../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span></a></div><div class="sb-l1"><a href="../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span></a></div><div class="sb-l1"><a href="../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span></a></div><div class="sb-l1"><a href="../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span></a></div><div class="sb-l1 sb-active"><a href="../ea-diagrams/index.html" class="sb-l1-a"><span class="sb-code" style="color:#7c3aed;">EA</span><span class="sb-lbl">EA Diagrams</span></a><ul class="sb-l2s"><li><a href="../ea-diagrams/ea-01.html" class="sb-l2-a"><span class="sb-l2-code">EA-01</span><span class="sb-l2-name">EA Diagram 1</span></a></li><li><a href="../ea-diagrams/ea-02.html" class="sb-l2-a"><span class="sb-l2-code">EA-02</span><span class="sb-l2-name">EA Diagram 2</span></a></li><li><a href="../ea-diagrams/ea-03.html" class="sb-l2-a"><span class="sb-l2-code" style="color:#e2e8f0;">EA-03</span><span class="sb-l2-name">EA Diagram 3</span></a></li><li><a href="../ea-diagrams/ea-04.html" class="sb-l2-a"><span class="sb-l2-code">EA-04</span><span class="sb-l2-name">EA Diagram 4</span></a></li><li><a href="../ea-diagrams/ea-05.html" class="sb-l2-a"><span class="sb-l2-code">EA-05</span><span class="sb-l2-name">EA Diagram 5</span></a></li></ul></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a><span>›</span>
+          <a href="index.html">EA Diagrams</a><span>›</span>
+          <span>EA-03</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+
+        <div class="page-header">
+          <div class="pid">EA-03 — ENTERPRISE ARCHITECTURE</div>
+          <h1>TMC Technology Stack — Amex GBT + Concur Complete</h1>
+          <p class="ea-subtitle">Full technology architecture of the world's largest TMC post-CWT acquisition (2025)</p>
+          <p class="description">Comprehensive view of the Amex GBT + Concur 'Complete' platform launched October 2025. Shows the integrated travel booking, expense management, payment, duty of care, and analytics layers — incorporating the CWT acquisition and the strategic alliance between Amex GBT and Concur.</p>
+          <div class="meta-row">
+            <span class="meta-pill" style="background:#f3e8ff;color:#6b21a8;border-color:#e9d5ff;">
+              Enterprise Architecture
+            </span>
+            <span class="meta-pill">Travel Agency Wiki</span>
+          </div>
+        </div>
+
+        <div class="ea-nav">
+          <a href="ea-02.html" class="ea-nav-btn">← EA-02</a>
+          <span style="font-size:13px;color:#64748b;">3 of 5</span>
+          <a href="ea-04.html" class="ea-nav-btn">EA-04 →</a>
+        </div>
+
+        <div class="wiki-section">
+          <h2>Architecture Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../assets/img/ea-03.png" alt="EA-03 — TMC Technology Stack — Amex GBT + Concur Complete" loading="lazy">
+            <p class="zoom-hint">🔍 Click to open full-screen pan &amp; zoom viewer · Scroll wheel to zoom · Drag to pan</p>
+          </div>
+        </div>
+
+        <div class="wiki-section">
+          <h2>About This Diagram</h2>
+          <p style="font-size:14px;line-height:1.8;color:#475569;">Comprehensive view of the Amex GBT + Concur 'Complete' platform launched October 2025. Shows the integrated travel booking, expense management, payment, duty of care, and analytics layers — incorporating the CWT acquisition and the strategic alliance between Amex GBT and Concur.</p>
+        </div>
+
+        <div class="wiki-section">
+          <h2>All EA Diagrams</h2>
+          <div class="domain-grid">
+            <a href="ea-01.html" class="domain-card" style=""><div class="domain-label" style="color:#7c3aed;">EA-01</div><h3>OTA System Landscape</h3><p style="font-size:12px;color:#64748b;">Full system architecture across supply, platform, customer, B2B, finance and dat...</p></a><a href="ea-02.html" class="domain-card" style=""><div class="domain-label" style="color:#7c3aed;">EA-02</div><h3>Travel Distribution Architecture</h3><p style="font-size:12px;color:#64748b;">How inventory flows from suppliers to consumers — airlines, hotels, GDS, OTA, TM...</p></a><a href="ea-03.html" class="domain-card" style="border:2px solid #7c3aed;"><div class="domain-label" style="color:#7c3aed;">EA-03</div><h3>TMC Technology Stack</h3><p style="font-size:12px;color:#64748b;">Full technology architecture of the world's largest TMC post-CWT acquisition (20...</p></a><a href="ea-04.html" class="domain-card" style=""><div class="domain-label" style="color:#7c3aed;">EA-04</div><h3>Corporate T&E Data Flow</h3><p style="font-size:12px;color:#64748b;">Complete data journey from trip booking through expense submission to ERP reimbu...</p></a><a href="ea-05.html" class="domain-card" style=""><div class="domain-label" style="color:#7c3aed;">EA-05</div><h3>Fraud Prevention & Payments Architecture</h3><p style="font-size:12px;color:#64748b;">Real-time ML fraud detection, 3DS authentication, EVC issuance, supplier settlem...</p></a>
+          </div>
+        </div>
+
+      </div>
+      <footer class="wiki-footer">
+        <p>EA-03 — TMC Technology Stack — Amex GBT + Concur Complete · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../assets/js/wiki.js"></script>
+</body>
+</html>
