@@ -7,159 +7,166 @@
   <link rel="stylesheet" href="assets/css/wiki.css">
 </head>
 <body>
-  <nav class="wiki-nav">
-    <a href="index.html" class="logo">✈ Travel Agency Wiki</a>
-    <div class="breadcrumb">
-      <span>Home</span>
-    </div>
-  </nav>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#7c3aed;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains · 5 EA Diagrams</span></div><nav class="sb-nav"><div class="sb-l1"><a href="ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span></a><ul class="sb-l2s"><li><a href="ob/search-ranking/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-SR</span><span class="sb-l2-name">Search Ranking</span></a></li><li><a href="ob/booking-flow/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-BK</span><span class="sb-l2-name">Booking Flow</span></a></li><li><a href="ob/channel-distribution-ota/index.html" class="sb-l2-a"><span class="sb-l2-code">OB-CH</span><span class="sb-l2-name">Channel Distribution</span></a></li></ul></div><div class="sb-l1"><a href="sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span></a><ul class="sb-l2s"><li><a href="sp/hotel-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-HT</span><span class="sb-l2-name">Hotel Supply</span></a></li><li><a href="sp/airline-supply/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AI</span><span class="sb-l2-name">Airline Supply</span></a></li><li><a href="sp/activities-cars/index.html" class="sb-l2-a"><span class="sb-l2-code">SP-AC</span><span class="sb-l2-name">Activities & Cars</span></a></li></ul></div><div class="sb-l1"><a href="cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span></a><ul class="sb-l2s"><li><a href="cx/customer-service-ota/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-CS</span><span class="sb-l2-name">Customer Service</span></a></li><li><a href="cx/personalisation-ux/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-PX</span><span class="sb-l2-name">Personalisation & UX</span></a></li></ul></div><div class="sb-l1"><a href="mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span></a><ul class="sb-l2s"><li><a href="mk/performance-marketing/index.html" class="sb-l2-a"><span class="sb-l2-code">MK-PM</span><span class="sb-l2-name">Performance Marketing</span></a></li><li><a href="mk/media-solutions/index.html" class="sb-l2-a"><span class="sb-l2-code">MK-MS</span><span class="sb-l2-name">Media Solutions</span></a></li></ul></div><div class="sb-l1"><a href="tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span></a><ul class="sb-l2s"><li><a href="tm/travel-policy-programme/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-BP</span><span class="sb-l2-name">Travel Policy</span></a></li><li><a href="tm/corporate-booking/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-BK</span><span class="sb-l2-name">Corporate Booking</span></a></li><li><a href="tm/meetings-events/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-ME</span><span class="sb-l2-name">Meetings & Events</span></a></li></ul></div><div class="sb-l1"><a href="ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span></a><ul class="sb-l2s"><li><a href="ex/expense-management/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-EM</span><span class="sb-l2-name">Expense Management</span></a></li><li><a href="ex/corporate-payments/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-PY</span><span class="sb-l2-name">Corporate Payments</span></a></li></ul></div><div class="sb-l1"><a href="dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span></a><ul class="sb-l2s"><li><a href="dc/traveller-tracking/index.html" class="sb-l2-a"><span class="sb-l2-code">DC-TR</span><span class="sb-l2-name">Traveller Tracking</span></a></li><li><a href="dc/compliance-regulatory/index.html" class="sb-l2-a"><span class="sb-l2-code">DC-CR</span><span class="sb-l2-name">Compliance & Regulatory</span></a></li></ul></div><div class="sb-l1"><a href="fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span></a><ul class="sb-l2s"><li><a href="fn/revenue-commission/index.html" class="sb-l2-a"><span class="sb-l2-code">FN-RC</span><span class="sb-l2-name">Revenue & Commission</span></a></li><li><a href="fn/financial-planning/index.html" class="sb-l2-a"><span class="sb-l2-code">FN-FP</span><span class="sb-l2-name">Financial Planning</span></a></li></ul></div><div class="sb-l1"><a href="it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span></a><ul class="sb-l2s"><li><a href="it/platform-engineering/index.html" class="sb-l2-a"><span class="sb-l2-code">IT-PF</span><span class="sb-l2-name">Platform Engineering</span></a></li><li><a href="it/data-ai-analytics/index.html" class="sb-l2-a"><span class="sb-l2-code">IT-DA</span><span class="sb-l2-name">Data AI & Analytics</span></a></li></ul></div><div class="sb-l1"><a href="ea-diagrams/index.html" class="sb-l1-a"><span class="sb-code" style="color:#7c3aed;">EA</span><span class="sb-lbl">EA Diagrams</span></a><ul class="sb-l2s"><li><a href="ea-diagrams/ea-01.html" class="sb-l2-a"><span class="sb-l2-code">EA-01</span><span class="sb-l2-name">EA Diagram 1</span></a></li><li><a href="ea-diagrams/ea-02.html" class="sb-l2-a"><span class="sb-l2-code">EA-02</span><span class="sb-l2-name">EA Diagram 2</span></a></li><li><a href="ea-diagrams/ea-03.html" class="sb-l2-a"><span class="sb-l2-code">EA-03</span><span class="sb-l2-name">EA Diagram 3</span></a></li><li><a href="ea-diagrams/ea-04.html" class="sb-l2-a"><span class="sb-l2-code">EA-04</span><span class="sb-l2-name">EA Diagram 4</span></a></li><li><a href="ea-diagrams/ea-05.html" class="sb-l2-a"><span class="sb-l2-code">EA-05</span><span class="sb-l2-name">EA Diagram 5</span></a></li></ul></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb"><span>Home</span></div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">CONSULTING REFERENCE WIKI</div>
+          <h1>Travel Agency Business Process Wiki</h1>
+          <p class="description">
+            Comprehensive OTA + TMC business process value chains for consulting engagements.
+            Reference companies: <strong>Expedia Group</strong> (OTA) and
+            <strong>American Express Global Business Travel / Concur</strong> (TMC).
+            Covers 168 processes across 9 L1 domains — from flight search algorithms to
+            duty of care compliance.
+          </p>
+          <div class="meta-row">
+            <span class="meta-pill ota">OTA — Expedia Group</span>
+            <span class="meta-pill tmc">TMC — Amex GBT + Concur</span>
+            <span class="meta-pill fn">Finance &amp; Settlement</span>
+            <span class="meta-pill it">Platform &amp; Data</span>
+          </div>
+        </div>
 
-  <div class="wiki-container">
-    <div class="page-header">
-      <div class="pid">SAP CONSULTING REFERENCE WIKI</div>
-      <h1>Travel Agency Business Process Wiki</h1>
-      <p class="description">
-        Comprehensive OTA + TMC business process value chains for SAP consulting engagements.
-        Reference companies: <strong>Expedia Group</strong> (OTA) and
-        <strong>American Express Global Business Travel / SAP Concur</strong> (TMC).
-        Covers 168 processes across 9 L1 domains — from flight search algorithms to
-        duty of care compliance.
-      </p>
-      <div class="meta-row">
-        <span class="meta-pill ota">OTA — Expedia Group</span>
-        <span class="meta-pill tmc">TMC — Amex GBT + SAP Concur</span>
-        <span class="meta-pill fn">Finance & Settlement</span>
-        <span class="meta-pill it">Platform & Data</span>
-        <!-- PROCESS_COUNT_PLACEHOLDER -->
+        <div class="wiki-section">
+          <h2>OTA — Online Travel Agency (Expedia Group reference)</h2>
+          <div class="domain-grid">
+            <a href="ob/index.html" class="domain-card">
+              <div class="domain-label ota">OB</div>
+              <h3>Online Booking &amp; Search</h3>
+              <p>Search ranking, booking flow, channel distribution. Expedia Open World, Amadeus NDC, One Key.</p>
+              <span class="count">24 processes · 3 L2 groups</span>
+            </a>
+            <a href="sp/index.html" class="domain-card">
+              <div class="domain-label ota">SP</div>
+              <h3>Supplier &amp; Inventory Management</h3>
+              <p>Hotel supply, airline content, activities &amp; cars. Partner Central, NDC onboarding, GDS fare management.</p>
+              <span class="count">24 processes · 3 L2 groups</span>
+            </a>
+            <a href="cx/index.html" class="domain-card">
+              <div class="domain-label ota">CX</div>
+              <h3>Customer Experience &amp; Service</h3>
+              <p>AI self-service, contact centre, personalisation, One Key loyalty. Salesforce CRM.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+            <a href="mk/index.html" class="domain-card">
+              <div class="domain-label ota">MK</div>
+              <h3>Marketing, Media &amp; Loyalty</h3>
+              <p>Performance marketing, TravelAds media solutions, metasearch bidding, B2B partnerships.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="wiki-section">
+          <h2>TMC — Travel Management Company (Amex GBT + Concur reference)</h2>
+          <div class="domain-grid">
+            <a href="tm/index.html" class="domain-card">
+              <div class="domain-label tmc">TM</div>
+              <h3>Travel Programme Management</h3>
+              <p>Policy design, OBT deployment, corporate booking, meetings &amp; events. Concur Complete, Amex GBT Neo.</p>
+              <span class="count">24 processes · 3 L2 groups</span>
+            </a>
+            <a href="ex/index.html" class="domain-card">
+              <div class="domain-label tmc">EX</div>
+              <h3>Expense &amp; Payments</h3>
+              <p>Expense management, corporate card, VCN issuance. Concur Expense, S/4HANA, Amex Corporate Card.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+            <a href="dc/index.html" class="domain-card">
+              <div class="domain-label tmc">DC</div>
+              <h3>Duty of Care &amp; Risk</h3>
+              <p>Traveller tracking, risk intelligence, visa compliance, GDPR. International SOS, NC4.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="wiki-section">
+          <h2>Shared — Finance &amp; Technology</h2>
+          <div class="domain-grid">
+            <a href="fn/index.html" class="domain-card">
+              <div class="domain-label fn">FN</div>
+              <h3>Finance &amp; Settlement</h3>
+              <p>Revenue recognition, GDS incentives, EVC settlement, BSP/ARC reconciliation, SOX compliance.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+            <a href="it/index.html" class="domain-card">
+              <div class="domain-label it">IT</div>
+              <h3>Platform Technology &amp; Data</h3>
+              <p>Open World platform engineering, API gateway, Snowflake data warehouse, ML/AI, Kafka streaming.</p>
+              <span class="count">16 processes · 2 L2 groups</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="wiki-section">
+          <h2>Enterprise Architecture Diagrams</h2>
+          <div class="domain-grid">
+            <a href="ea-diagrams/ea-01.html" class="domain-card">
+              <div class="domain-label" style="color:#7c3aed;">EA-01</div>
+              <h3>OTA System Landscape</h3>
+              <p>Expedia Group full system map — supply, platform, customer, B2B, finance layers.</p>
+            </a>
+            <a href="ea-diagrams/ea-02.html" class="domain-card">
+              <div class="domain-label" style="color:#7c3aed;">EA-02</div>
+              <h3>Travel Distribution Architecture</h3>
+              <p>Supplier → GDS → OTA → TMC → Corporate Traveller full inventory flow.</p>
+            </a>
+            <a href="ea-diagrams/ea-03.html" class="domain-card">
+              <div class="domain-label" style="color:#7c3aed;">EA-03</div>
+              <h3>TMC Technology Stack</h3>
+              <p>Amex GBT + Concur "Complete" full stack post-CWT acquisition.</p>
+            </a>
+            <a href="ea-diagrams/ea-04.html" class="domain-card">
+              <div class="domain-label" style="color:#7c3aed;">EA-04</div>
+              <h3>Corporate T&amp;E Data Flow</h3>
+              <p>Booking → PNR → receipt → expense → ERP → analytics data journey.</p>
+            </a>
+            <a href="ea-diagrams/ea-05.html" class="domain-card">
+              <div class="domain-label" style="color:#7c3aed;">EA-05</div>
+              <h3>Fraud Prevention &amp; Payments</h3>
+              <p>ML scoring → 3DS → EVC issuance → settlement → dispute handling.</p>
+            </a>
+          </div>
+        </div>
+
       </div>
+      <footer class="wiki-footer">
+        <p>Travel Agency Process Wiki · OTA reference: Expedia Group · TMC reference: Amex GBT + Concur Complete</p>
+        <p style="margin-top:4px;">Built for consulting engagements · 168 processes · 9 L1 domains · 5 EA diagrams</p>
+      </footer>
     </div>
-
-    <!-- OTA DOMAINS -->
-    <div class="wiki-section">
-      <h2>OTA — Online Travel Agency (Expedia Group reference)</h2>
-      <div class="domain-grid">
-
-        <a href="ob/index.html" class="domain-card">
-          <div class="domain-label ota" style="color:#1d4ed8;">OB</div>
-          <h3>Online Booking &amp; Search</h3>
-          <p>Search ranking, booking flow, channel distribution. Expedia Open World, Amadeus NDC, One Key.</p>
-          <span class="count">24 processes · 3 L2 groups</span>
-        </a>
-
-        <a href="sp/index.html" class="domain-card">
-          <div class="domain-label ota" style="color:#1d4ed8;">SP</div>
-          <h3>Supplier &amp; Inventory Management</h3>
-          <p>Hotel supply, airline content, activities &amp; cars. Partner Central, NDC onboarding, GDS fare management.</p>
-          <span class="count">24 processes · 3 L2 groups</span>
-        </a>
-
-        <a href="cx/index.html" class="domain-card">
-          <div class="domain-label ota" style="color:#1d4ed8;">CX</div>
-          <h3>Customer Experience &amp; Service</h3>
-          <p>AI self-service, contact centre, personalisation, One Key loyalty. Salesforce CRM.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-        <a href="mk/index.html" class="domain-card">
-          <div class="domain-label ota" style="color:#1d4ed8;">MK</div>
-          <h3>Marketing, Media &amp; Loyalty</h3>
-          <p>Performance marketing, TravelAds media solutions, metasearch bidding, B2B partnerships.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- TMC DOMAINS -->
-    <div class="wiki-section">
-      <h2>TMC — Travel Management Company (Amex GBT + SAP Concur reference)</h2>
-      <div class="domain-grid">
-
-        <a href="tm/index.html" class="domain-card">
-          <div class="domain-label tmc" style="color:#9f1239;">TM</div>
-          <h3>Travel Programme Management</h3>
-          <p>Policy design, OBT deployment, corporate booking, meetings &amp; events. SAP Concur Complete, Amex GBT Neo.</p>
-          <span class="count">24 processes · 3 L2 groups</span>
-        </a>
-
-        <a href="ex/index.html" class="domain-card">
-          <div class="domain-label tmc" style="color:#9f1239;">EX</div>
-          <h3>Expense &amp; Payments</h3>
-          <p>Expense management, corporate card, VCN issuance. SAP Concur Expense, SAP S/4HANA, Amex Corporate Card.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-        <a href="dc/index.html" class="domain-card">
-          <div class="domain-label tmc" style="color:#9f1239;">DC</div>
-          <h3>Duty of Care &amp; Risk</h3>
-          <p>Traveller tracking, risk intelligence, visa compliance, GDPR. International SOS, NC4.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- SHARED DOMAINS -->
-    <div class="wiki-section">
-      <h2>Shared — Finance &amp; Technology</h2>
-      <div class="domain-grid">
-
-        <a href="fn/index.html" class="domain-card">
-          <div class="domain-label fn" style="color:#065f46;">FN</div>
-          <h3>Finance &amp; Settlement</h3>
-          <p>Revenue recognition, GDS incentives, EVC settlement, BSP/ARC reconciliation, SOX compliance.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-        <a href="it/index.html" class="domain-card">
-          <div class="domain-label it" style="color:#075985;">IT</div>
-          <h3>Platform Technology &amp; Data</h3>
-          <p>Open World platform engineering, API gateway, Snowflake data warehouse, ML/AI, Kafka streaming.</p>
-          <span class="count">16 processes · 2 L2 groups</span>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- EA DIAGRAMS -->
-    <div class="wiki-section">
-      <h2>Enterprise Architecture Diagrams</h2>
-      <div class="domain-grid">
-        <a href="ea-diagrams/ea-01.html" class="domain-card">
-          <div class="domain-label" style="color:#7c3aed;">EA-01</div>
-          <h3>OTA System Landscape</h3>
-          <p>Expedia Group full system map by layer — supply, platform, customer, B2B, finance.</p>
-        </a>
-        <a href="ea-diagrams/ea-02.html" class="domain-card">
-          <div class="domain-label" style="color:#7c3aed;">EA-02</div>
-          <h3>Travel Distribution Architecture</h3>
-          <p>Supplier → GDS → OTA → TMC → Corporate Traveller inventory flow.</p>
-        </a>
-        <a href="ea-diagrams/ea-03.html" class="domain-card">
-          <div class="domain-label" style="color:#7c3aed;">EA-03</div>
-          <h3>TMC Technology Stack</h3>
-          <p>Amex GBT + SAP Concur "Complete" full stack post-CWT acquisition.</p>
-        </a>
-        <a href="ea-diagrams/ea-04.html" class="domain-card">
-          <div class="domain-label" style="color:#7c3aed;">EA-04</div>
-          <h3>Corporate T&amp;E Data Flow</h3>
-          <p>Booking → PNR → receipt → expense → ERP → analytics data journey.</p>
-        </a>
-        <a href="ea-diagrams/ea-05.html" class="domain-card">
-          <div class="domain-label" style="color:#7c3aed;">EA-05</div>
-          <h3>Fraud Prevention &amp; Payments</h3>
-          <p>ML scoring → 3DS → EVC issuance → settlement → dispute handling.</p>
-        </a>
-      </div>
-    </div>
-
   </div>
-
-  <footer class="wiki-footer">
-    <p>Travel Agency Process Wiki · OTA reference: Expedia Group · TMC reference: Amex GBT + SAP Concur Complete</p>
-    <p style="margin-top:4px;">Built for SAP consulting engagements · 168 processes · 9 L1 domains · 5 EA diagrams</p>
-  </footer>
-
   <script src="assets/js/wiki.js"></script>
 </body>
 </html>
