@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>EX-EM-04 — Manager Approval Workflow</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">4/16</span></a><ul class="sb-l2s"><li><a href="../../ex/expense-management/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-EM</span><span class="sb-l2-name">Expense Management</span><span class="sb-l2-cnt">4/8</span></a></li><li><a href="../../ex/corporate-payments/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-PY</span><span class="sb-l2-name">Corporate Payments and Settlement</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../ex/index.html">TMC Expense and Payments</a><span>›</span>
+          <a href="../../ex/expense-management/index.html">Expense Management</a><span>›</span>
+          <span>EX-EM-04</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">EX-EM-04</div>
+          <h1>Manager Approval Workflow</h1>
+          <p class="description">This process document outlines the Manager Approval Workflow for TMC Expense and Payments, detailing how expenses are submitted, reviewed, and approved by managers.</p>
+          <div class="meta-row">
+            <span class="meta-pill tmc">EX — TMC Expense and Payments</span>
+            <span class="meta-pill">Expense Management</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">An employee submits an expense report through the SAP Concur Expense system.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">The manager approves or rejects the expense report, with successful approval leading to payment processing.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag concur">SAP Analytics Cloud</span> <span class="sys-tag powerbi">Tableau</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/ex-em-04.png" alt="EX-EM-04 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Expense Submission</strong><br><span style="color:#64748b;font-size:12px">Complexity in categorizing expenses</span></td><td>Employee</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Expense Report</td><td style="font-size:12px">Submitted Expense Report</td><td style="font-size:12px">95% of expenses submitted within 24 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Expense Review Notification</strong><br><span style="color:#64748b;font-size:12px">High volume of notifications</span></td><td>Manager</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Notification of Submitted Report</td><td style="font-size:12px">Acknowledgment of Receipt</td><td style="font-size:12px">90% of managers review reports within 48 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Expense Review</strong><br><span style="color:#64748b;font-size:12px">Lack of clear guidelines for review</span></td><td>Manager</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Submitted Expense Report</td><td style="font-size:12px">Reviewed Expense Report</td><td style="font-size:12px">85% of reports reviewed without errors</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Approval/Rejection Decision</strong><br><span style="color:#64748b;font-size:12px">Inconsistent approval criteria</span></td><td>Manager</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Reviewed Expense Report</td><td style="font-size:12px">Approved or Rejected Expense Report</td><td style="font-size:12px">80% of reports approved within 72 hours</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Approval Notification</strong><br><span style="color:#64748b;font-size:12px">System downtime affecting notification delivery</span></td><td>Employee</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Approved or Rejected Report</td><td style="font-size:12px">Notification of Approval/Rejection</td><td style="font-size:12px">75% of employees receive notifications within 24 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Payment Processing</strong><br><span style="color:#64748b;font-size:12px">Integration issues between systems</span></td><td>Finance Team</td><td><span class="sys-tag sap">SAP S/4HANA, Amex Corporate Card</span></td><td style="font-size:12px">Approved Expense Report</td><td style="font-size:12px">Processed Payment</td><td style="font-size:12px">70% of payments processed within 5 business days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Payment Confirmation</strong><br><span style="color:#64748b;font-size:12px">Delayed payments due to manual processing</span></td><td>Employee</td><td><span class="sys-tag concur">SAP Concur Expense, Amex Corporate Card</span></td><td style="font-size:12px">Processed Payment</td><td style="font-size:12px">Confirmation of Payment</td><td style="font-size:12px">65% of employees receive payment confirmation within 24 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Expense Report Closure</strong><br><span style="color:#64748b;font-size:12px">Difficulty in tracking report status</span></td><td>Employee</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Confirmed Payment</td><td style="font-size:12px">Closed Expense Report</td><td style="font-size:12px">60% of reports closed within 7 days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Audit and Reporting</strong><br><span style="color:#64748b;font-size:12px">Data accuracy issues in reporting</span></td><td>Finance Team</td><td><span class="sys-tag powerbi">SAP Analytics Cloud, Tableau</span></td><td style="font-size:12px">Closed Expense Reports</td><td style="font-size:12px">Expense Audit Report</td><td style="font-size:12px">55% of reports audited within 30 days</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Feedback Loop</strong><br><span style="color:#64748b;font-size:12px">Lack of user-friendly feedback mechanisms</span></td><td>Employee, Manager</td><td><span class="sys-tag concur">SAP Concur Expense</span></td><td style="font-size:12px">Expense Audit Report</td><td style="font-size:12px">Feedback and Improvements</td><td style="font-size:12px">50% of feedback provided within 7 days</td><td><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Expense Submission within 24 hours (95%)</span>
+<span class="chip kpi">Manager Review within 48 hours (90%)</span>
+<span class="chip kpi">Correct Report Reviews (85%)</span>
+<span class="chip kpi">Approvals within 72 hours (80%)</span>
+<span class="chip kpi">Notifications within 24 hours (75%)</span>
+<span class="chip kpi">Payments within 5 business days (70%)</span>
+<span class="chip kpi">Payment Confirmations within 24 hours (65%)</span>
+<span class="chip kpi">Reports Closed within 7 days (60%)</span>
+<span class="chip kpi">Audits within 30 days (55%)</span>
+<span class="chip kpi">Feedback Provided within 7 days (50%)</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">System downtime affecting notifications and payments</span>
+<span class="chip risk">Integration issues between different systems</span>
+<span class="chip risk">Manual processing delays in payment handling</span>
+<span class="chip risk">Data accuracy issues leading to incorrect reporting</span>
+<span class="chip risk">User frustration due to complex expense categorization and feedback mechanisms</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>EX-EM-04 — Manager Approval Workflow · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
