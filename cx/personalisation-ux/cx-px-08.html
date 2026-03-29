@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CX-PX-08 — Customer Data Platform CDP Management</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a><ul class="sb-l2s"><li><a href="../../cx/customer-service-ota/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-CS</span><span class="sb-l2-name">Customer Service Operations</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../cx/personalisation-ux/index.html" class="sb-l2-a"><span class="sb-l2-code">CX-PX</span><span class="sb-l2-name">Personalisation and User Experience</span><span class="sb-l2-cnt">8/8</span></a></li></ul></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../cx/index.html">OTA Customer Experience and Service</a><span>›</span>
+          <a href="../../cx/personalisation-ux/index.html">Personalisation and User Experience</a><span>›</span>
+          <span>CX-PX-08</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">CX-PX-08</div>
+          <h1>Customer Data Platform CDP Management</h1>
+          <p class="description">This process document outlines the management of a Customer Data Platform (CDP) for Expedia Group's OTA and TMC systems, focusing on personalization and user experience improvements.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">CX — OTA Customer Experience and Service</span>
+            <span class="meta-pill">Personalisation and User Experience</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Initiation of a new CDP project or update to an existing one based on business needs or technological advancements.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">A robust CDP system that integrates seamlessly with all relevant OTA and TMC systems, enabling personalized customer experiences and improved service delivery.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag intsos">International SOS</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag">VCN</span> <span class="sys-tag concur">SAP Analytics Cloud</span> <span class="sys-tag sap">Workday</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/cx-px-08.png" alt="CX-PX-08 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Define Objectives and Scope</strong><br><span style="color:#64748b;font-size:12px">Aligning business goals with technical capabilities</span></td><td>Project Manager</td><td><span class="sys-tag">N/A</span></td><td style="font-size:12px">Business requirements document</td><td style="font-size:12px">Scope document</td><td style="font-size:12px">Clear objectives outlined</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Data Mapping and Integration Planning</strong><br><span style="color:#64748b;font-size:12px">Handling data from diverse systems</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka</span></td><td style="font-size:12px">Scope document</td><td style="font-size:12px">Integration plan</td><td style="font-size:12px">Data sources identified and mapped</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.3</td><td><strong>CDP Platform Selection</strong><br><span style="color:#64748b;font-size:12px">Choosing the right CDP for scalability and integration</span></td><td>Solution Architect</td><td><span class="sys-tag snowflake">Snowflake, Kafka, Salesforce</span></td><td style="font-size:12px">Integration plan</td><td style="font-size:12px">CDP platform recommendation</td><td style="font-size:12px">CDP vendor selected</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Data Ingestion and Storage Setup</strong><br><span style="color:#64748b;font-size:12px">Real-time data processing and storage</span></td><td>Data Engineer</td><td><span class="sys-tag snowflake">Snowflake, Kafka</span></td><td style="font-size:12px">CDP platform recommendation</td><td style="font-size:12px">Data ingestion pipelines</td><td style="font-size:12px">Data ingestion rate meets SLA</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Data Quality Assurance</strong><br><span style="color:#64748b;font-size:12px">Ensuring data integrity across systems</span></td><td>Data Analyst</td><td><span class="sys-tag snowflake">Snowflake, Tableau</span></td><td style="font-size:12px">Data ingestion pipelines</td><td style="font-size:12px">Data quality report</td><td style="font-size:12px">Data accuracy and completeness</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Personalization Strategy Development</strong><br><span style="color:#64748b;font-size:12px">Balancing personalization with privacy concerns</span></td><td>UX Designer, Data Scientist</td><td><span class="sys-tag aws">AWS SageMaker, Tableau</span></td><td style="font-size:12px">Data quality report</td><td style="font-size:12px">Personalization strategy document</td><td style="font-size:12px">Personalization rules defined</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Implementation of Personalization Rules</strong><br><span style="color:#64748b;font-size:12px">Testing and deploying changes across multiple systems</span></td><td>Developer</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds</span></td><td style="font-size:12px">Personalization strategy document</td><td style="font-size:12px">Personalized user experiences</td><td style="font-size:12px">User engagement metrics improved</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Monitoring and Optimization</strong><br><span style="color:#64748b;font-size:12px">Adapting to changing customer behavior</span></td><td>Data Analyst, DevOps Engineer</td><td><span class="sys-tag snowflake">Snowflake, Kafka, Tableau</span></td><td style="font-size:12px">Personalized user experiences</td><td style="font-size:12px">Optimization report</td><td style="font-size:12px">Continuous improvement in personalization effectiveness</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Security and Compliance Review</strong><br><span style="color:#64748b;font-size:12px">Meeting regulatory requirements</span></td><td>Security Officer, Legal Counsel</td><td><span class="sys-tag snowflake">Snowflake, Kafka, Salesforce</span></td><td style="font-size:12px">Optimization report</td><td style="font-size:12px">Compliance certification</td><td style="font-size:12px">Data security and privacy compliance</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Stakeholder Communication and Training</strong><br><span style="color:#64748b;font-size:12px">Effective communication across teams</span></td><td>Project Manager, UX Designer</td><td><span class="sys-tag">N/A</span></td><td style="font-size:12px">Compliance certification</td><td style="font-size:12px">Training materials</td><td style="font-size:12px">Stakeholders trained and informed</td><td><span class="dp-yes">◆ Decision</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Clear objectives outlined</span>
+<span class="chip kpi">Data ingestion rate meets SLA</span>
+<span class="chip kpi">Data accuracy and completeness</span>
+<span class="chip kpi">Personalization rules defined</span>
+<span class="chip kpi">User engagement metrics improved</span>
+<span class="chip kpi">Continuous improvement in personalization effectiveness</span>
+<span class="chip kpi">Data security and privacy compliance</span>
+<span class="chip kpi">Stakeholders trained and informed</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Inaccurate data mapping leading to integration issues</span>
+<span class="chip risk">Difficulty in selecting a CDP platform that meets all requirements</span>
+<span class="chip risk">Real-time data processing challenges affecting user experience</span>
+<span class="chip risk">Personalization rules not aligning with customer expectations</span>
+<span class="chip risk">Security breaches compromising sensitive customer data</span>
+<span class="chip risk">Resistance to change among stakeholders</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>CX-PX-08 — Customer Data Platform CDP Management · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
