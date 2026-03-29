@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MK-PM-03 — Programmatic Display and Retargeting</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1 sb-active"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">3/16</span></a><ul class="sb-l2s"><li><a href="../../mk/performance-marketing/index.html" class="sb-l2-a"><span class="sb-l2-code">MK-PM</span><span class="sb-l2-name">Performance Marketing</span><span class="sb-l2-cnt">3/8</span></a></li><li><a href="../../mk/media-solutions/index.html" class="sb-l2-a"><span class="sb-l2-code">MK-MS</span><span class="sb-l2-name">Media Solutions and B2B Marketing</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">1/24</span></a></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../mk/index.html">OTA Marketing Media and Loyalty</a><span>›</span>
+          <a href="../../mk/performance-marketing/index.html">Performance Marketing</a><span>›</span>
+          <span>MK-PM-03</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">MK-PM-03</div>
+          <h1>Programmatic Display and Retargeting</h1>
+          <p class="description">This process document outlines the steps for implementing programmatic display and retargeting campaigns across OTA and TMC systems to optimize marketing media spend and enhance loyalty programs.</p>
+          <div class="meta-row">
+            <span class="meta-pill ota">MK — OTA Marketing Media and Loyalty</span>
+            <span class="meta-pill">Performance Marketing</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Initiation of a new marketing campaign or update to an existing one, requiring programmatic display and retargeting strategies.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successful execution of programmatic display and retargeting campaigns leading to increased brand awareness, higher conversion rates, and improved customer engagement metrics.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag amadeus">Amadeus GDS</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag intsos">International SOS</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag">VCN</span> <span class="sys-tag concur">SAP Analytics Cloud</span> <span class="sys-tag sap">Workday</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/mk-pm-03.png" alt="MK-PM-03 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Define Campaign Objectives</strong><br><span style="color:#64748b;font-size:12px">Aligning marketing goals with business objectives</span></td><td>Marketing Manager</td><td><span class="sys-tag salesforce">Salesforce</span></td><td style="font-size:12px">Campaign goals and target audience details</td><td style="font-size:12px">Campaign brief document</td><td style="font-size:12px">Clear objectives outlined</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Data Integration and Preparation</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of data efficiently</span></td><td>Data Analyst</td><td><span class="sys-tag snowflake">Snowflake, Kafka</span></td><td style="font-size:12px">Customer data from various sources</td><td style="font-size:12px">Cleaned and integrated dataset</td><td style="font-size:12px">Data quality metrics met</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Develop Targeting Strategies</strong><br><span style="color:#64748b;font-size:12px">Creating accurate audience segments</span></td><td>Digital Marketing Specialist</td><td><span class="sys-tag aws">AWS SageMaker, Tableau</span></td><td style="font-size:12px">Integrated dataset and campaign brief</td><td style="font-size:12px">Targeting parameters and audience segments</td><td style="font-size:12px">Relevant audience targeting achieved</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Configure Programmatic Campaigns</strong><br><span style="color:#64748b;font-size:12px">Integrating with multiple OTA systems</span></td><td>Programmatic Specialist</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, TravelAds</span></td><td style="font-size:12px">Targeting strategies and campaign brief</td><td style="font-size:12px">Configured programmatic campaigns</td><td style="font-size:12px">Campaign setup completed within SLA</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Monitor and Optimize Campaigns</strong><br><span style="color:#64748b;font-size:12px">Real-time monitoring and optimization</span></td><td>Performance Analyst</td><td><span class="sys-tag powerbi">SAP Analytics Cloud, Tableau</span></td><td style="font-size:12px">Campaign performance data</td><td style="font-size:12px">Optimization recommendations</td><td style="font-size:12px">Campaign ROI meets or exceeds expectations</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Evaluate Campaign Performance</strong><br><span style="color:#64748b;font-size:12px">Summarizing complex data into actionable insights</span></td><td>Marketing Manager</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Optimization recommendations and final campaign data</td><td style="font-size:12px">Campaign performance report</td><td style="font-size:12px">Campaign success metrics documented</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Adjust Strategies Based on Evaluation</strong><br><span style="color:#64748b;font-size:12px">Iterating on strategies for continuous improvement</span></td><td>Digital Marketing Specialist</td><td><span class="sys-tag aws">AWS SageMaker, Tableau</span></td><td style="font-size:12px">Campaign performance report and optimization recommendations</td><td style="font-size:12px">Updated targeting strategies and campaign adjustments</td><td style="font-size:12px">Strategies refined based on evaluation</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Report to Stakeholders</strong><br><span style="color:#64748b;font-size:12px">Communicating complex data to non-technical stakeholders</span></td><td>Marketing Manager</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Campaign performance report and optimization recommendations</td><td style="font-size:12px">Stakeholder presentation</td><td style="font-size:12px">Stakeholders informed of campaign outcomes</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Close Campaign and Archive Data</strong><br><span style="color:#64748b;font-size:12px">Ensuring data security and compliance</span></td><td>Data Analyst</td><td><span class="sys-tag snowflake">Snowflake, Kafka</span></td><td style="font-size:12px">Final campaign data and performance report</td><td style="font-size:12px">Archived campaign data</td><td style="font-size:12px">Campaign data securely stored for future reference</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Review and Document Lessons Learned</strong><br><span style="color:#64748b;font-size:12px">Capturing valuable insights from campaign execution</span></td><td>Marketing Manager</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Campaign performance report and optimization recommendations</td><td style="font-size:12px">Lessons learned document</td><td style="font-size:12px">Organizational knowledge improved through lessons learned</td><td><span class="dp-yes">◆ Decision</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Campaign setup completed within SLA</span>
+<span class="chip kpi">Data quality metrics met</span>
+<span class="chip kpi">Relevant audience targeting achieved</span>
+<span class="chip kpi">Campaign ROI meets or exceeds expectations</span>
+<span class="chip kpi">Strategies refined based on evaluation</span>
+<span class="chip kpi">Stakeholders informed of campaign outcomes</span>
+<span class="chip kpi">Campaign data securely stored for future reference</span>
+<span class="chip kpi">Organizational knowledge improved through lessons learned</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Misalignment between marketing goals and business objectives</span>
+<span class="chip risk">Inaccurate audience segmentation leading to poor targeting</span>
+<span class="chip risk">Technical issues with integrating multiple OTA systems</span>
+<span class="chip risk">Difficulty in real-time monitoring and optimization of campaigns</span>
+<span class="chip risk">Challenges in summarizing complex data for stakeholders</span>
+<span class="chip risk">Data security and compliance issues during campaign execution</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>MK-PM-03 — Programmatic Display and Retargeting · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
