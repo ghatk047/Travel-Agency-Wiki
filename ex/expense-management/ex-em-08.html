@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>EX-EM-08 — Expense Analytics and Spend Dashboard SAP Analytics Cloud</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1 sb-active"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">8/16</span></a><ul class="sb-l2s"><li><a href="../../ex/expense-management/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-EM</span><span class="sb-l2-name">Expense Management</span><span class="sb-l2-cnt">8/8</span></a></li><li><a href="../../ex/corporate-payments/index.html" class="sb-l2-a"><span class="sb-l2-code">EX-PY</span><span class="sb-l2-name">Corporate Payments and Settlement</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../ex/index.html">TMC Expense and Payments</a><span>›</span>
+          <a href="../../ex/expense-management/index.html">Expense Management</a><span>›</span>
+          <span>EX-EM-08</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">EX-EM-08</div>
+          <h1>Expense Analytics and Spend Dashboard SAP Analytics Cloud</h1>
+          <p class="description">This process document outlines the EX-EM-08 — Expense Analytics and Spend Dashboard SAP Analytics Cloud, focusing on integrating various OTA and TMC systems to provide comprehensive expense analytics and spend management.</p>
+          <div class="meta-row">
+            <span class="meta-pill tmc">EX — TMC Expense and Payments</span>
+            <span class="meta-pill">Expense Management</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">Initiation of a new financial reporting cycle or upon request from stakeholders for updated expense data analysis.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Successful creation and deployment of an interactive expense analytics dashboard in SAP Analytics Cloud, enabling real-time monitoring and insights into travel expenses across different systems.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag openworld">Expedia Open World</span> <span class="sys-tag partner-central">Partner Central</span> <span class="sys-tag amadeus">Amadeus NDC</span> <span class="sys-tag sabre">Sabre GDS</span> <span class="sys-tag travelport">Travelport</span> <span class="sys-tag evc">EVC</span> <span class="sys-tag one-key">One Key</span> <span class="sys-tag">TravelAds</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag concur">SAP Concur Expense</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span> <span class="sys-tag amadeus">Amadeus GDS</span> <span class="sys-tag sap">SAP S/4HANA</span> <span class="sys-tag intsos">International SOS</span> <span class="sys-tag cvent">Cvent</span> <span class="sys-tag">Amex Corporate Card</span> <span class="sys-tag">VCN</span> <span class="sys-tag concur">SAP Analytics Cloud</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/ex-em-08.png" alt="EX-EM-08 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Data Extraction from OTA Systems</strong><br><span style="color:#64748b;font-size:12px">Handling inconsistent data formats across different OTA systems</span></td><td>Data Engineer</td><td><span class="sys-tag openworld">Expedia Open World, Partner Central, Amadeus NDC, Sabre GDS, Travelport, EVC, One Key, TravelAds, AWS SageMaker, Snowflake, Kafka, Salesforce</span></td><td style="font-size:12px">Expense data from various OTA systems</td><td style="font-size:12px">Extracted and transformed expense data in a standardized format</td><td style="font-size:12px">Data extraction success rate > 95%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Data Extraction from TMC Systems</strong><br><span style="color:#64748b;font-size:12px">Integrating with legacy systems like SAP S/4HANA</span></td><td>Data Engineer</td><td><span class="sys-tag amadeus">SAP Concur T2, SAP Concur Expense, Amex GBT Neo/Complete, Amadeus GDS, SAP S/4HANA, International SOS, Cvent, Amex Corporate Card, VCN</span></td><td style="font-size:12px">Expense data from various TMC systems</td><td style="font-size:12px">Extracted and transformed expense data in a standardized format</td><td style="font-size:12px">Data extraction success rate > 95%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Data Integration and Transformation</strong><br><span style="color:#64748b;font-size:12px">Real-time data synchronization between systems</span></td><td>ETL Specialist</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, Kafka</span></td><td style="font-size:12px">Standardized expense data from OTA and TMC systems</td><td style="font-size:12px">Integrated and transformed data ready for analytics</td><td style="font-size:12px">Data integration success rate > 98%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Data Load into SAP Analytics Cloud</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of data efficiently</span></td><td>BI Analyst</td><td><span class="sys-tag concur">SAP Analytics Cloud</span></td><td style="font-size:12px">Integrated and transformed expense data</td><td style="font-size:12px">Loaded data in SAP Analytics Cloud for analytics</td><td style="font-size:12px">Data load success rate > 99%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Dashboard Design and Development</strong><br><span style="color:#64748b;font-size:12px">Designing intuitive and user-friendly dashboards</span></td><td>BI Analyst</td><td><span class="sys-tag powerbi">SAP Analytics Cloud, Tableau</span></td><td style="font-size:12px">Loaded expense data in SAP Analytics Cloud</td><td style="font-size:12px">Interactive expense analytics dashboard</td><td style="font-size:12px">User satisfaction with dashboard > 85%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Dashboard Deployment</strong><br><span style="color:#64748b;font-size:12px">Ensuring secure and seamless deployment</span></td><td>BI Analyst</td><td><span class="sys-tag concur">SAP Analytics Cloud</span></td><td style="font-size:12px">Finalized expense analytics dashboard</td><td style="font-size:12px">Deployed dashboard accessible to stakeholders</td><td style="font-size:12px">Deployment success rate > 95%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>User Training and Support</strong><br><span style="color:#64748b;font-size:12px">Providing adequate training and support</span></td><td>BI Analyst, IT Support</td><td><span class="sys-tag concur">SAP Analytics Cloud</span></td><td style="font-size:12px">Deployed expense analytics dashboard</td><td style="font-size:12px">Trained users on using the dashboard</td><td style="font-size:12px">User adoption rate > 80%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Monitoring and Maintenance</strong><br><span style="color:#64748b;font-size:12px">Handling unexpected issues in real-time</span></td><td>Data Engineer, BI Analyst</td><td><span class="sys-tag snowflake">AWS SageMaker, Snowflake, SAP Analytics Cloud</span></td><td style="font-size:12px">Operational data from deployed dashboard</td><td style="font-size:12px">Continuous monitoring and maintenance of the system</td><td style="font-size:12px">System uptime > 99%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Performance Review and Optimization</strong><br><span style="color:#64748b;font-size:12px">Optimizing query performance for large datasets</span></td><td>BI Analyst, Data Engineer</td><td><span class="sys-tag snowflake">SAP Analytics Cloud, AWS SageMaker, Snowflake</span></td><td style="font-size:12px">Operational data from deployed dashboard</td><td style="font-size:12px">Optimized system performance based on review</td><td style="font-size:12px">Query response time < 5 seconds</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Reporting and Feedback Loop</strong><br><span style="color:#64748b;font-size:12px">Collecting actionable feedback from users</span></td><td>BI Analyst, Stakeholders</td><td><span class="sys-tag salesforce">SAP Analytics Cloud, Salesforce</span></td><td style="font-size:12px">Operational data from deployed dashboard</td><td style="font-size:12px">Regular reporting and feedback loop for continuous improvement</td><td style="font-size:12px">Feedback response time < 24 hours</td><td><span class="exc-yes">⚠ Exception</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Data extraction success rate > 95%</span>
+<span class="chip kpi">Data integration success rate > 98%</span>
+<span class="chip kpi">Data load success rate > 99%</span>
+<span class="chip kpi">User satisfaction with dashboard > 85%</span>
+<span class="chip kpi">Deployment success rate > 95%</span>
+<span class="chip kpi">User adoption rate > 80%</span>
+<span class="chip kpi">System uptime > 99%</span>
+<span class="chip kpi">Query response time < 5 seconds</span>
+<span class="chip kpi">Feedback response time < 24 hours</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Inconsistent data formats across different OTA systems</span>
+<span class="chip risk">Integrating with legacy systems like SAP S/4HANA</span>
+<span class="chip risk">Real-time data synchronization between systems</span>
+<span class="chip risk">Handling large volumes of data efficiently</span>
+<span class="chip risk">Designing intuitive and user-friendly dashboards</span>
+<span class="chip risk">Ensuring secure and seamless deployment</span>
+<span class="chip risk">Providing adequate training and support</span>
+<span class="chip risk">Handling unexpected issues in real-time</span>
+<span class="chip risk">Optimizing query performance for large datasets</span>
+<span class="chip risk">Collecting actionable feedback from users</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>EX-EM-08 — Expense Analytics and Spend Dashboard SAP Analytics Cloud · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
