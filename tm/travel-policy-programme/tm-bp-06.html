@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TM-BP-06 — Traveller Profile Management and GDPR Compliance</title>
+  <link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body>
+  <div class="wiki-layout">
+    <style>
+.wiki-layout{display:flex;min-height:100vh;}
+.wiki-sidebar{width:236px;min-width:236px;background:#1e293b;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;font-family:-apple-system,sans-serif;}
+.sb-hdr{padding:14px 12px 10px;border-bottom:1px solid #334155;}
+.sb-logo{font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;}
+.sb-sub{font-size:10px;color:#475569;margin-top:3px;display:block;}
+.sb-nav{padding:6px 0;}
+.sb-l1{border-bottom:1px solid #1a2332;}
+.sb-l1-a{display:flex;align-items:center;gap:5px;padding:8px 12px;text-decoration:none;
+  color:#94a3b8;font-size:12px;transition:background .15s;}
+.sb-l1-a:hover,.sb-active .sb-l1-a{background:#0f172a;color:#f1f5f9;}
+.sb-code{font-weight:700;font-size:11px;min-width:22px;}
+.sb-lbl{flex:1;font-size:11px;}
+.sb-cnt{font-size:10px;color:#475569;background:#0f172a;padding:1px 5px;border-radius:10px;}
+.sb-active .sb-cnt{background:#1d4ed8;color:#fff;}
+.sb-l2s{list-style:none;background:#0f172a;margin:0;padding:0;}
+.sb-l2-a{display:flex;align-items:center;gap:5px;padding:6px 12px 6px 20px;text-decoration:none;
+  color:#64748b;font-size:11px;}
+.sb-l2-a:hover{color:#e2e8f0;}
+.sb-l2-code{font-weight:600;font-size:10px;min-width:34px;color:#475569;}
+.sb-l2-name{flex:1;}
+.sb-l2-cnt{font-size:10px;color:#334155;}
+.wiki-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+@media(max-width:768px){.wiki-sidebar{display:none;}.wiki-layout{display:block;}}
+</style><aside class="wiki-sidebar"><div class="sb-hdr"><a href="../../index.html" class="sb-logo">✈ Travel Agency Wiki</a><span class="sb-sub">168 Processes · 9 Domains</span></div><nav class="sb-nav"><div class="sb-l1"><a href="../../ob/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">OB</span><span class="sb-lbl">Online Booking & Search</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../sp/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">SP</span><span class="sb-lbl">Supplier & Inventory</span><span class="sb-cnt">24/24</span></a></div><div class="sb-l1"><a href="../../cx/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">CX</span><span class="sb-lbl">Customer Experience</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1"><a href="../../mk/index.html" class="sb-l1-a"><span class="sb-code" style="color:#1d4ed8;">MK</span><span class="sb-lbl">Marketing & Loyalty</span><span class="sb-cnt">16/16</span></a></div><div class="sb-l1 sb-active"><a href="../../tm/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">TM</span><span class="sb-lbl">Travel Programme</span><span class="sb-cnt">6/24</span></a><ul class="sb-l2s"><li><a href="../../tm/travel-policy-programme/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-BP</span><span class="sb-l2-name">Business Travel Policy and Programme</span><span class="sb-l2-cnt">6/8</span></a></li><li><a href="../../tm/corporate-booking/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-BK</span><span class="sb-l2-name">Corporate Booking and Servicing</span><span class="sb-l2-cnt">0/8</span></a></li><li><a href="../../tm/meetings-events/index.html" class="sb-l2-a"><span class="sb-l2-code">TM-ME</span><span class="sb-l2-name">Meetings Events and MICE</span><span class="sb-l2-cnt">0/8</span></a></li></ul></div><div class="sb-l1"><a href="../../ex/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">EX</span><span class="sb-lbl">Expense & Payments</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../dc/index.html" class="sb-l1-a"><span class="sb-code" style="color:#9f1239;">DC</span><span class="sb-lbl">Duty of Care & Risk</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../fn/index.html" class="sb-l1-a"><span class="sb-code" style="color:#065f46;">FN</span><span class="sb-lbl">Finance & Settlement</span><span class="sb-cnt">0/16</span></a></div><div class="sb-l1"><a href="../../it/index.html" class="sb-l1-a"><span class="sb-code" style="color:#075985;">IT</span><span class="sb-lbl">Platform & Data</span><span class="sb-cnt">0/16</span></a></div></nav></aside>
+    <div class="wiki-main">
+      <nav class="wiki-nav">
+        <a href="../../index.html" class="logo">✈ Travel Agency Wiki</a>
+        <div class="breadcrumb">
+          <a href="../../index.html">Home</a><span>›</span>
+          <a href="../../tm/index.html">TMC Travel Programme Management</a><span>›</span>
+          <a href="../../tm/travel-policy-programme/index.html">Business Travel Policy and Programme</a><span>›</span>
+          <span>TM-BP-06</span>
+        </div>
+      </nav>
+      <div class="wiki-container">
+        <div class="page-header">
+          <div class="pid">TM-BP-06</div>
+          <h1>Traveller Profile Management and GDPR Compliance</h1>
+          <p class="description">This process document outlines the steps for managing traveller profiles and ensuring GDPR compliance within the TMC Travel Programme Management domain.</p>
+          <div class="meta-row">
+            <span class="meta-pill tmc">TM — TMC Travel Programme Management</span>
+            <span class="meta-pill">Business Travel Policy and Programme</span>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Process Overview</h2>
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <tr><td style="width:110px;font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Trigger</td>
+                <td style="padding:8px 0;">A new traveller is added to the system or an existing traveller's profile needs updating.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Outcome</td>
+                <td style="padding:8px 0;">Traveller profiles are accurately maintained, GDPR compliance is ensured, and all relevant data is securely managed.</td></tr>
+            <tr><td style="font-weight:600;color:#64748b;padding:8px 0;vertical-align:top;">Systems</td>
+                <td style="padding:8px 0;"><span class="sys-tag concur">SAP Concur T2</span> <span class="sys-tag aws">AWS SageMaker</span> <span class="sys-tag kafka">Kafka</span> <span class="sys-tag snowflake">Snowflake</span> <span class="sys-tag salesforce">Salesforce</span> <span class="sys-tag powerbi">Tableau</span> <span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span></td></tr>
+          </table>
+        </div>
+        <div class="wiki-section">
+          <h2>BPMN Process Diagram</h2>
+          <div class="diagram-wrapper">
+            <img src="../../assets/img/tm-bp-06.png" alt="TM-BP-06 BPMN" loading="lazy">
+            <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Click to enlarge</p>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>L4 Process Steps</h2>
+          <div style="overflow-x:auto;">
+            <table class="steps-table">
+              <thead><tr>
+                <th>Step</th><th>Name &amp; Pain Point</th><th>Role</th><th>System</th>
+                <th>Input</th><th>Output</th><th>KPI</th><th>Flags</th>
+              </tr></thead>
+              <tbody><tr><td class="step-id">1.1</td><td><strong>Initiate Profile Update Request</strong><br><span style="color:#64748b;font-size:12px">Handling large volumes of requests efficiently</span></td><td>Travel Manager</td><td><span class="sys-tag concur">SAP Concur T2</span></td><td style="font-size:12px">Traveller details and update request</td><td style="font-size:12px">Profile update request logged in system</td><td style="font-size:12px">Time to log profile update request < 5 minutes</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.2</td><td><strong>Validate Profile Data</strong><br><span style="color:#64748b;font-size:12px">Ensuring data quality and consistency</span></td><td>Data Validator</td><td><span class="sys-tag aws">AWS SageMaker</span></td><td style="font-size:12px">Traveller profile data</td><td style="font-size:12px">Validated traveller profile data</td><td style="font-size:12px">Data validation accuracy > 95%</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.3</td><td><strong>Update Traveller Profile in SAP Concur T2</strong><br><span style="color:#64748b;font-size:12px">System integration and performance</span></td><td>System Administrator</td><td><span class="sys-tag concur">SAP Concur T2</span></td><td style="font-size:12px">Validated traveller profile data</td><td style="font-size:12px">Updated traveller profile in SAP Concur T2</td><td style="font-size:12px">Profile update time < 10 minutes</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.4</td><td><strong>Sync Profile Data with Other Systems</strong><br><span style="color:#64748b;font-size:12px">Real-time data synchronization</span></td><td>Integration Specialist</td><td><span class="sys-tag snowflake">Kafka, Snowflake</span></td><td style="font-size:12px">Updated traveller profile data</td><td style="font-size:12px">Synchronized traveller profile data across systems</td><td style="font-size:12px">Data sync success rate > 98%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.5</td><td><strong>Review GDPR Compliance</strong><br><span style="color:#64748b;font-size:12px">Complexity of GDPR regulations</span></td><td>GDPR Officer</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Traveller profile data and GDPR compliance checklist</td><td style="font-size:12px">Compliance report</td><td style="font-size:12px">Compliance review time < 2 hours</td><td><span class="dp-yes">◆ Decision</span></td></tr><tr><td class="step-id">1.6</td><td><strong>Update Traveller Profile in Amex GBT Neo/Complete</strong><br><span style="color:#64748b;font-size:12px">System integration and performance</span></td><td>System Administrator</td><td><span class="sys-tag amex-gbt">Amex GBT Neo/Complete</span></td><td style="font-size:12px">Compliant traveller profile data</td><td style="font-size:12px">Updated traveller profile in Amex GBT Neo/Complete</td><td style="font-size:12px">Profile update time < 10 minutes</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.7</td><td><strong>Notify Traveller of Profile Update</strong><br><span style="color:#64748b;font-size:12px">Ensuring secure communication</span></td><td>Travel Manager</td><td><span class="sys-tag">Email System</span></td><td style="font-size:12px">Traveller contact information and update details</td><td style="font-size:12px">Notification email sent to traveller</td><td style="font-size:12px">Notification delivery rate > 95%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.8</td><td><strong>Log Compliance Actions</strong><br><span style="color:#64748b;font-size:12px">System performance and scalability</span></td><td>GDPR Officer</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Compliance actions taken</td><td style="font-size:12px">Logged compliance actions in system</td><td style="font-size:12px">Action logging time < 5 minutes</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.9</td><td><strong>Monitor Profile Changes</strong><br><span style="color:#64748b;font-size:12px">Real-time data analysis</span></td><td>Data Analyst</td><td><span class="sys-tag snowflake">Snowflake, Tableau</span></td><td style="font-size:12px">Traveller profile changes</td><td style="font-size:12px">Profile change monitoring report</td><td style="font-size:12px">Change detection accuracy > 98%</td><td><span class="exc-yes">⚠ Exception</span></td></tr><tr><td class="step-id">1.10</td><td><strong>Review and Update GDPR Policies</strong><br><span style="color:#64748b;font-size:12px">Keeping up with regulatory changes</span></td><td>GDPR Officer</td><td><span class="sys-tag salesforce">Salesforce, Tableau</span></td><td style="font-size:12px">Compliance monitoring report</td><td style="font-size:12px">Updated GDPR policies and procedures</td><td style="font-size:12px">Policy update frequency > 1 per quarter</td><td><span class="dp-yes">◆ Decision</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="wiki-section">
+          <h2>Key Performance Indicators</h2>
+          <div class="chip-list"><span class="chip kpi">Time to log profile update request < 5 minutes</span>
+<span class="chip kpi">Data validation accuracy > 95%</span>
+<span class="chip kpi">Profile update time < 10 minutes</span>
+<span class="chip kpi">Data sync success rate > 98%</span>
+<span class="chip kpi">Compliance review time < 2 hours</span>
+<span class="chip kpi">Notification delivery rate > 95%</span>
+<span class="chip kpi">Action logging time < 5 minutes</span>
+<span class="chip kpi">Change detection accuracy > 98%</span>
+<span class="chip kpi">Policy update frequency > 1 per quarter</span></div>
+        </div>
+        <div class="wiki-section">
+          <h2>Risks &amp; Exceptions</h2>
+          <div class="chip-list"><span class="chip risk">Handling large volumes of requests efficiently</span>
+<span class="chip risk">Ensuring data quality and consistency</span>
+<span class="chip risk">System integration and performance</span>
+<span class="chip risk">Real-time data synchronization</span>
+<span class="chip risk">Complexity of GDPR regulations</span>
+<span class="chip risk">Ensuring secure communication</span>
+<span class="chip risk">System performance and scalability</span>
+<span class="chip risk">Real-time data analysis</span>
+<span class="chip risk">Keeping up with regulatory changes</span></div>
+        </div>
+      </div>
+      <footer class="wiki-footer">
+        <p>TM-BP-06 — Traveller Profile Management and GDPR Compliance · Travel Agency Process Wiki</p>
+        <p style="margin-top:4px;">OTA: Expedia Group · TMC: Amex GBT + SAP Concur Complete</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/wiki.js"></script>
+</body>
+</html>
